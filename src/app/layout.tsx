@@ -7,7 +7,7 @@ import { buildOrganizationSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Emploi Public au Maroc : Concours et Offres 2025',
+    default: 'Emploi Public au Maroc : Concours et Offres 2026',
     template: '%s | Emploi Public Maroc',
   },
   description: siteConfig.description,
@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: 'Emploi Public au Maroc : Concours et Offres 2025',
+    title: 'Emploi Public au Maroc : Concours et Offres 2026',
     description: siteConfig.description,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Emploi Public au Maroc : Concours et Offres 2025',
+    title: 'Emploi Public au Maroc : Concours et Offres 2026',
     description: siteConfig.description,
   },
   robots: {

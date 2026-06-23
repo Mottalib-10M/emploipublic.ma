@@ -3,7 +3,7 @@ export const siteConfig = {
   domain: 'emploipublic.ma',
   url: 'https://emploipublic.ma',
   tagline: 'Concours, offres d\'emploi et outils pour la fonction publique au Maroc',
-  description: 'Emploi Public au Maroc : concours de la fonction publique, offres d\'emploi, grille de salaires, et generateur de CV gratuit. Tout pour reussir votre carriere dans la fonction publique marocaine.',
+  description: 'Emploi Public au Maroc : concours de la fonction publique, offres d\'emploi, grille de salaires, et générateur de CV gratuit. Tout pour réussir votre carrière dans la fonction publique marocaine.',
   author: {
     name: 'Mottalib Radif',
     title: 'MBA INSEAD',
@@ -21,8 +21,8 @@ export const siteConfig = {
   },
   nav: [
     { label: 'Concours', href: '/concours/' },
-    { label: 'Ministeres', href: '/ministeres/' },
-    { label: 'Generateur CV', href: '/generateur-cv/' },
+    { label: 'Ministères', href: '/ministeres/' },
+    { label: 'Générateur CV', href: '/generateur-cv/' },
     { label: 'Guides', href: '/guides/reussir-concours-public/' },
     { label: 'Salaires', href: '/salaires-fonction-publique/' },
   ],

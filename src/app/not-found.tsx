@@ -8,11 +8,11 @@ export default function NotFound() {
       </div>
       <h1 className="text-3xl font-bold text-gray-900 mb-4">Page introuvable</h1>
       <p className="text-gray-600 mb-8 max-w-md mx-auto">
-        La page que vous recherchez n&apos;existe pas ou a ete deplacee. Retournez a l&apos;accueil ou utilisez la navigation pour trouver ce que vous cherchez.
+        La page que vous recherchez n&apos;existe pas ou a été déplacée. Retournez à l&apos;accueil ou utilisez la navigation pour trouver ce que vous cherchez.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link href="/" className="btn-primary">
-          Retour a l&apos;accueil
+          Retour à l&apos;accueil
         </Link>
         <Link href="/concours/" className="btn-secondary">
           Voir les concours

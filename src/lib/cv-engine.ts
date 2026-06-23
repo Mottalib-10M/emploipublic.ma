@@ -18,7 +18,7 @@ export interface Formation {
 
 export interface Langue {
   langue: string;
-  niveau: 'Debutant' | 'Intermediaire' | 'Avance' | 'Courant' | 'Langue maternelle';
+  niveau: 'Débutant' | 'Intermédiaire' | 'Avancé' | 'Courant' | 'Langue maternelle';
 }
 
 export interface CVData {
@@ -61,40 +61,40 @@ export const emptyCVData: CVData = {
 };
 
 export const niveauxLangue: Langue['niveau'][] = [
-  'Debutant',
-  'Intermediaire',
-  'Avance',
+  'Débutant',
+  'Intermédiaire',
+  'Avancé',
   'Courant',
   'Langue maternelle',
 ];
 
 export const competencesSuggestions = [
   'Microsoft Office',
-  'Excel avance',
+  'Excel avancé',
   'Word',
   'PowerPoint',
   'Gestion de projet',
-  'Comptabilite',
+  'Comptabilité',
   'Droit administratif',
-  'Redaction administrative',
+  'Rédaction administrative',
   'Communication',
-  'Travail en equipe',
+  'Travail en équipe',
   'Leadership',
   'Organisation',
   'Gestion du temps',
-  'Analyse de donnees',
+  'Analyse de données',
   'Informatique',
-  'Base de donnees',
-  'Gestion budgetaire',
+  'Base de données',
+  'Gestion budgétaire',
   'Planification',
-  'Negociation',
+  'Négociation',
   'Service public',
   'Accueil du public',
   'Archivage',
   'Bureautique',
   'SAP',
   'Audit',
-  'Controle de gestion',
+  'Contrôle de gestion',
   'Ressources humaines',
   'Formation',
   'Encadrement',
@@ -119,9 +119,9 @@ function formatDescription(desc: string): string {
 
 function renderNiveauBar(niveau: Langue['niveau']): string {
   const levels: Record<Langue['niveau'], number> = {
-    'Debutant': 1,
-    'Intermediaire': 2,
-    'Avance': 3,
+    'Débutant': 1,
+    'Intermédiaire': 2,
+    'Avancé': 3,
     'Courant': 4,
     'Langue maternelle': 5,
   };
@@ -145,7 +145,7 @@ export function generateCVClassique(data: CVData): string {
       ${data.email ? ` | ${escapeHtml(data.email)}` : ''}
     </div>
     <div style="font-size:13px;color:#444;margin-top:4px">
-      ${data.dateNaissance ? `Ne(e) le ${escapeHtml(data.dateNaissance)}` : ''}
+      ${data.dateNaissance ? `Né(e) le ${escapeHtml(data.dateNaissance)}` : ''}
       ${data.nationalite ? ` | ${escapeHtml(data.nationalite)}` : ''}
       ${data.situationFamiliale ? ` | ${escapeHtml(data.situationFamiliale)}` : ''}
     </div>
@@ -153,12 +153,12 @@ export function generateCVClassique(data: CVData): string {
 
   ${data.experiences.length > 0 ? `
   <div style="margin-bottom:20px">
-    <h2 class="cv-section-title" style="font-size:16px;text-transform:uppercase;color:#7C3AED;border-bottom:2px solid #7C3AED;padding-bottom:4px;margin-bottom:12px;letter-spacing:1px">Experience Professionnelle</h2>
+    <h2 class="cv-section-title" style="font-size:16px;text-transform:uppercase;color:#7C3AED;border-bottom:2px solid #7C3AED;padding-bottom:4px;margin-bottom:12px;letter-spacing:1px">Expérience Professionnelle</h2>
     ${data.experiences.map(exp => `
     <div style="margin-bottom:14px">
       <div style="display:flex;justify-content:space-between;align-items:baseline">
         <strong style="font-size:14px">${escapeHtml(exp.poste)}</strong>
-        <span style="font-size:12px;color:#666">${escapeHtml(exp.dateDebut)} - ${exp.enCours ? 'Present' : escapeHtml(exp.dateFin)}</span>
+        <span style="font-size:12px;color:#666">${escapeHtml(exp.dateDebut)} - ${exp.enCours ? 'Présent' : escapeHtml(exp.dateFin)}</span>
       </div>
       <div style="font-size:13px;color:#555;font-style:italic">${escapeHtml(exp.entreprise)}${exp.ville ? `, ${escapeHtml(exp.ville)}` : ''}</div>
       ${exp.description ? `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px">${formatDescription(exp.description)}</ul>` : ''}
@@ -180,7 +180,7 @@ export function generateCVClassique(data: CVData): string {
 
   ${data.competences.length > 0 ? `
   <div style="margin-bottom:20px">
-    <h2 class="cv-section-title" style="font-size:16px;text-transform:uppercase;color:#7C3AED;border-bottom:2px solid #7C3AED;padding-bottom:4px;margin-bottom:12px;letter-spacing:1px">Competences</h2>
+    <h2 class="cv-section-title" style="font-size:16px;text-transform:uppercase;color:#7C3AED;border-bottom:2px solid #7C3AED;padding-bottom:4px;margin-bottom:12px;letter-spacing:1px">Compétences</h2>
     <p style="font-size:13px">${data.competences.map(c => escapeHtml(c)).join(' &bull; ')}</p>
   </div>` : ''}
 
@@ -202,7 +202,7 @@ export function generateCVClassique(data: CVData): string {
 
   ${data.centresInteret.length > 0 ? `
   <div style="margin-bottom:20px">
-    <h2 class="cv-section-title" style="font-size:16px;text-transform:uppercase;color:#7C3AED;border-bottom:2px solid #7C3AED;padding-bottom:4px;margin-bottom:12px;letter-spacing:1px">Centres d'Interet</h2>
+    <h2 class="cv-section-title" style="font-size:16px;text-transform:uppercase;color:#7C3AED;border-bottom:2px solid #7C3AED;padding-bottom:4px;margin-bottom:12px;letter-spacing:1px">Centres d'Intérêt</h2>
     <p style="font-size:13px">${data.centresInteret.map(c => escapeHtml(c)).join(' &bull; ')}</p>
   </div>` : ''}
 </div>`;
@@ -237,7 +237,7 @@ export function generateCVModerne(data: CVData): string {
 
     ${data.competences.length > 0 ? `
     <div style="margin-bottom:20px">
-      <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:4px;margin-bottom:8px">Competences</h3>
+      <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:4px;margin-bottom:8px">Compétences</h3>
       <div style="font-size:12px">${data.competences.map(c => `<div style="background:rgba(255,255,255,0.15);border-radius:4px;padding:3px 8px;margin-bottom:4px;display:inline-block;margin-right:4px">${escapeHtml(c)}</div>`).join('')}</div>
     </div>` : ''}
 
@@ -253,7 +253,7 @@ export function generateCVModerne(data: CVData): string {
 
     ${data.centresInteret.length > 0 ? `
     <div>
-      <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:4px;margin-bottom:8px">Centres d'Interet</h3>
+      <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:4px;margin-bottom:8px">Centres d'Intérêt</h3>
       <div style="font-size:12px">${data.centresInteret.map(c => escapeHtml(c)).join(' &bull; ')}</div>
     </div>` : ''}
   </div>
@@ -267,12 +267,12 @@ export function generateCVModerne(data: CVData): string {
 
     ${data.experiences.length > 0 ? `
     <div style="margin-bottom:22px">
-      <h2 class="cv-section-title" style="font-size:15px;text-transform:uppercase;color:#7C3AED;letter-spacing:1px;border-bottom:2px solid #7C3AED;padding-bottom:4px;margin-bottom:10px">Experience Professionnelle</h2>
+      <h2 class="cv-section-title" style="font-size:15px;text-transform:uppercase;color:#7C3AED;letter-spacing:1px;border-bottom:2px solid #7C3AED;padding-bottom:4px;margin-bottom:10px">Expérience Professionnelle</h2>
       ${data.experiences.map(exp => `
       <div style="margin-bottom:14px;padding-left:14px;border-left:3px solid #e5e7eb">
         <div style="font-weight:700;font-size:14px;color:#1a1a1a">${escapeHtml(exp.poste)}</div>
         <div style="font-size:12px;color:#7C3AED;font-weight:600">${escapeHtml(exp.entreprise)}${exp.ville ? ` — ${escapeHtml(exp.ville)}` : ''}</div>
-        <div style="font-size:11px;color:#888;margin-bottom:4px">${escapeHtml(exp.dateDebut)} - ${exp.enCours ? 'Present' : escapeHtml(exp.dateFin)}</div>
+        <div style="font-size:11px;color:#888;margin-bottom:4px">${escapeHtml(exp.dateDebut)} - ${exp.enCours ? 'Présent' : escapeHtml(exp.dateFin)}</div>
         ${exp.description ? `<ul style="margin:4px 0 0;padding-left:16px;font-size:12px;color:#444">${formatDescription(exp.description)}</ul>` : ''}
       </div>`).join('')}
     </div>` : ''}
@@ -307,7 +307,7 @@ export function generateCVProfessionnel(data: CVData): string {
       ${data.email ? `<span>${escapeHtml(data.email)}</span>` : ''}
       ${data.telephone ? `<span>${escapeHtml(data.telephone)}</span>` : ''}
       ${data.ville ? `<span>${escapeHtml(data.ville)}</span>` : ''}
-      ${data.dateNaissance ? `<span>Ne(e) le ${escapeHtml(data.dateNaissance)}</span>` : ''}
+      ${data.dateNaissance ? `<span>Né(e) le ${escapeHtml(data.dateNaissance)}</span>` : ''}
     </div>
   </div>
 
@@ -315,12 +315,12 @@ export function generateCVProfessionnel(data: CVData): string {
     <div style="flex:1">
       ${data.experiences.length > 0 ? `
       <div style="margin-bottom:22px">
-        <h2 class="cv-section-title" style="font-size:15px;font-weight:800;text-transform:uppercase;color:#7C3AED;padding-bottom:6px;border-bottom:3px solid #7C3AED;margin-bottom:12px;letter-spacing:1px">Experience Professionnelle</h2>
+        <h2 class="cv-section-title" style="font-size:15px;font-weight:800;text-transform:uppercase;color:#7C3AED;padding-bottom:6px;border-bottom:3px solid #7C3AED;margin-bottom:12px;letter-spacing:1px">Expérience Professionnelle</h2>
         ${data.experiences.map(exp => `
         <div style="margin-bottom:16px">
           <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
             <span style="font-weight:700;font-size:14px">${escapeHtml(exp.poste)}</span>
-            <span style="font-size:11px;color:#7C3AED;font-weight:600;background:#f5f3ff;padding:2px 8px;border-radius:4px">${escapeHtml(exp.dateDebut)} - ${exp.enCours ? 'Present' : escapeHtml(exp.dateFin)}</span>
+            <span style="font-size:11px;color:#7C3AED;font-weight:600;background:#f5f3ff;padding:2px 8px;border-radius:4px">${escapeHtml(exp.dateDebut)} - ${exp.enCours ? 'Présent' : escapeHtml(exp.dateFin)}</span>
           </div>
           <div style="font-size:13px;color:#555;margin-top:2px">${escapeHtml(exp.entreprise)}${exp.ville ? `, ${escapeHtml(exp.ville)}` : ''}</div>
           ${exp.description ? `<ul style="margin:6px 0 0;padding-left:16px;font-size:12px;color:#444">${formatDescription(exp.description)}</ul>` : ''}
@@ -344,7 +344,7 @@ export function generateCVProfessionnel(data: CVData): string {
     <div style="width:220px;flex-shrink:0">
       ${data.competences.length > 0 ? `
       <div style="margin-bottom:22px">
-        <h2 class="cv-section-title" style="font-size:15px;font-weight:800;text-transform:uppercase;color:#7C3AED;padding-bottom:6px;border-bottom:3px solid #7C3AED;margin-bottom:12px;letter-spacing:1px">Competences</h2>
+        <h2 class="cv-section-title" style="font-size:15px;font-weight:800;text-transform:uppercase;color:#7C3AED;padding-bottom:6px;border-bottom:3px solid #7C3AED;margin-bottom:12px;letter-spacing:1px">Compétences</h2>
         <div style="display:flex;flex-wrap:wrap;gap:4px">${data.competences.map(c => `<span style="background:#f5f3ff;color:#7C3AED;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500">${escapeHtml(c)}</span>`).join('')}</div>
       </div>` : ''}
 
@@ -369,7 +369,7 @@ export function generateCVProfessionnel(data: CVData): string {
 
       ${data.centresInteret.length > 0 ? `
       <div style="margin-bottom:22px">
-        <h2 class="cv-section-title" style="font-size:15px;font-weight:800;text-transform:uppercase;color:#7C3AED;padding-bottom:6px;border-bottom:3px solid #7C3AED;margin-bottom:12px;letter-spacing:1px">Centres d'Interet</h2>
+        <h2 class="cv-section-title" style="font-size:15px;font-weight:800;text-transform:uppercase;color:#7C3AED;padding-bottom:6px;border-bottom:3px solid #7C3AED;margin-bottom:12px;letter-spacing:1px">Centres d'Intérêt</h2>
         <p style="font-size:12px">${data.centresInteret.map(c => escapeHtml(c)).join(' &bull; ')}</p>
       </div>` : ''}
     </div>

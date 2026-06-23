@@ -18,12 +18,12 @@ interface FormulaireCVProps {
 
 const STEPS = [
   'Informations personnelles',
-  'Experiences',
+  'Expériences',
   'Formations',
-  'Competences',
+  'Compétences',
   'Langues',
   'Certifications & Loisirs',
-  'Apercu',
+  'Aperçu',
 ];
 
 const LOCAL_STORAGE_KEY = 'emploipublic_cv_data';
@@ -69,7 +69,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
     const errs: Record<string, string> = {};
 
     if (step === 0) {
-      if (!cvData.prenom.trim()) errs.prenom = 'Le prenom est requis';
+      if (!cvData.prenom.trim()) errs.prenom = 'Le prénom est requis';
       if (!cvData.nom.trim()) errs.nom = 'Le nom est requis';
       if (cvData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cvData.email)) {
         errs.email = 'Email invalide';
@@ -135,7 +135,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
   // Langue helpers
   const addLangue = () => {
     update({
-      langues: [...cvData.langues, { langue: '', niveau: 'Intermediaire' }],
+      langues: [...cvData.langues, { langue: '', niveau: 'Intermédiaire' }],
     });
   };
 
@@ -196,7 +196,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
   };
 
   const resetForm = () => {
-    if (confirm('Voulez-vous vraiment effacer toutes les donnees du CV ?')) {
+    if (confirm('Voulez-vous vraiment effacer toutes les données du CV ?')) {
       onChange(emptyCVData);
       localStorage.removeItem(LOCAL_STORAGE_KEY);
       setStep(0);
@@ -209,7 +209,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
       <div className="px-6 pt-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm font-medium text-gray-700">
-            Etape {step + 1} sur {STEPS.length}
+            Étape {step + 1} sur {STEPS.length}
           </span>
           <span className="text-sm text-gray-500">{STEPS[step]}</span>
         </div>
@@ -245,7 +245,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Informations personnelles</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="label-field">Prenom *</label>
+                <label className="label-field">Prénom *</label>
                 <input
                   type="text"
                   className={`input-field ${errors.prenom ? 'border-red-500' : ''}`}
@@ -278,7 +278,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                 {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
               </div>
               <div>
-                <label className="label-field">Telephone</label>
+                <label className="label-field">Téléphone</label>
                 <input
                   type="text"
                   className="input-field"
@@ -318,7 +318,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                 />
               </div>
               <div>
-                <label className="label-field">Nationalite</label>
+                <label className="label-field">Nationalité</label>
                 <input
                   type="text"
                   className="input-field"
@@ -335,9 +335,9 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                   onChange={(e) => update({ situationFamiliale: e.target.value })}
                 >
                   <option value="">-- Choisir --</option>
-                  <option value="Celibataire">Celibataire</option>
-                  <option value="Marie(e)">Marie(e)</option>
-                  <option value="Divorce(e)">Divorce(e)</option>
+                  <option value="Célibataire">Célibataire</option>
+                  <option value="Marié(e)">Marié(e)</option>
+                  <option value="Divorcé(e)">Divorcé(e)</option>
                   <option value="Veuf(ve)">Veuf(ve)</option>
                 </select>
               </div>
@@ -349,7 +349,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                 rows={3}
                 value={cvData.objectif}
                 onChange={(e) => update({ objectif: e.target.value })}
-                placeholder="Cadre administratif motive, titulaire d'un Master en droit public, souhaitant mettre ses competences au service de la fonction publique marocaine..."
+                placeholder="Cadre administratif motivé, titulaire d'un Master en droit public, souhaitant mettre ses compétences au service de la fonction publique marocaine..."
               />
             </div>
           </div>
@@ -359,20 +359,20 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
         {step === 1 && (
           <div className="space-y-4">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-gray-900">Experiences professionnelles</h3>
+              <h3 className="text-lg font-semibold text-gray-900">Expériences professionnelles</h3>
               <button onClick={addExperience} className="btn-primary text-sm !py-2 !px-4">
                 + Ajouter
               </button>
             </div>
             {cvData.experiences.length === 0 && (
               <p className="text-gray-500 text-center py-8">
-                Aucune experience ajoutee. Cliquez sur &quot;Ajouter&quot; pour commencer.
+                Aucune expérience ajoutée. Cliquez sur &quot;Ajouter&quot; pour commencer.
               </p>
             )}
             {cvData.experiences.map((exp, i) => (
               <div key={i} className="border border-gray-200 rounded-lg p-4 space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="font-medium text-sm text-primary-600">Experience {i + 1}</span>
+                  <span className="font-medium text-sm text-primary-600">Expérience {i + 1}</span>
                   <button
                     onClick={() => removeExperience(i)}
                     className="text-red-500 hover:text-red-700 text-sm"
@@ -398,7 +398,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                       className="input-field"
                       value={exp.entreprise}
                       onChange={(e) => updateExperience(i, { entreprise: e.target.value })}
-                      placeholder="Ministere de l'Education Nationale"
+                      placeholder="Ministère de l'Éducation Nationale"
                     />
                   </div>
                   <div>
@@ -413,7 +413,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                   </div>
                   <div className="flex gap-2">
                     <div className="flex-1">
-                      <label className="label-field">Date debut</label>
+                      <label className="label-field">Date début</label>
                       <input
                         type="text"
                         className="input-field"
@@ -429,7 +429,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                         className="input-field"
                         value={exp.dateFin}
                         onChange={(e) => updateExperience(i, { dateFin: e.target.value })}
-                        placeholder="Dec 2023"
+                        placeholder="Déc 2023"
                         disabled={exp.enCours}
                       />
                     </div>
@@ -445,13 +445,13 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                   Poste actuel
                 </label>
                 <div>
-                  <label className="label-field">Description (une tache par ligne)</label>
+                  <label className="label-field">Description (une tâche par ligne)</label>
                   <textarea
                     className="input-field"
                     rows={3}
                     value={exp.description}
                     onChange={(e) => updateExperience(i, { description: e.target.value })}
-                    placeholder="Gestion des dossiers administratifs&#10;Redaction de rapports&#10;Coordination avec les services regionaux"
+                    placeholder="Gestion des dossiers administratifs&#10;Rédaction de rapports&#10;Coordination avec les services régionaux"
                   />
                 </div>
               </div>
@@ -470,7 +470,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
             </div>
             {cvData.formations.length === 0 && (
               <p className="text-gray-500 text-center py-8">
-                Aucune formation ajoutee. Cliquez sur &quot;Ajouter&quot; pour commencer.
+                Aucune formation ajoutée. Cliquez sur &quot;Ajouter&quot; pour commencer.
               </p>
             )}
             {cvData.formations.map((f, i) => (
@@ -486,7 +486,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="sm:col-span-2">
-                    <label className="label-field">Diplome</label>
+                    <label className="label-field">Diplôme</label>
                     <input
                       type="text"
                       className="input-field"
@@ -496,13 +496,13 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                     />
                   </div>
                   <div>
-                    <label className="label-field">Etablissement</label>
+                    <label className="label-field">Établissement</label>
                     <input
                       type="text"
                       className="input-field"
                       value={f.etablissement}
                       onChange={(e) => updateFormation(i, { etablissement: e.target.value })}
-                      placeholder="Universite Mohammed V"
+                      placeholder="Université Mohammed V"
                     />
                   </div>
                   <div>
@@ -516,7 +516,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                     />
                   </div>
                   <div>
-                    <label className="label-field">Annee</label>
+                    <label className="label-field">Année</label>
                     <input
                       type="text"
                       className="input-field"
@@ -544,9 +544,9 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
         {/* Step 3: Competences */}
         {step === 3 && (
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Competences</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Compétences</h3>
             <div className="relative">
-              <label className="label-field">Ajouter une competence</label>
+              <label className="label-field">Ajouter une compétence</label>
               <div className="flex gap-2">
                 <input
                   type="text"
@@ -563,7 +563,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                       addCompetence(competenceInput);
                     }
                   }}
-                  placeholder="Tapez une competence puis Entree"
+                  placeholder="Tapez une compétence puis Entrée"
                 />
                 <button
                   onClick={() => addCompetence(competenceInput)}
@@ -603,7 +603,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
               ))}
             </div>
             {cvData.competences.length === 0 && (
-              <p className="text-gray-500 text-sm">Aucune competence ajoutee. Commencez a taper pour voir les suggestions.</p>
+              <p className="text-gray-500 text-sm">Aucune compétence ajoutée. Commencez à taper pour voir les suggestions.</p>
             )}
           </div>
         )}
@@ -626,7 +626,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                     className="input-field"
                     value={l.langue}
                     onChange={(e) => updateLangue(i, { langue: e.target.value })}
-                    placeholder="Francais"
+                    placeholder="Français"
                   />
                 </div>
                 <div className="flex-1">
@@ -695,7 +695,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Centres d&apos;interet</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Centres d&apos;intérêt</h3>
               <div className="flex gap-2">
                 <input
                   type="text"
@@ -708,7 +708,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                       addInteret();
                     }
                   }}
-                  placeholder="Ex: Lecture, Sport, Benevolat, ..."
+                  placeholder="Ex: Lecture, Sport, Bénévolat, ..."
                 />
                 <button onClick={addInteret} className="btn-primary text-sm !py-2 !px-4">
                   Ajouter
@@ -739,19 +739,19 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900">Votre CV est pret !</h3>
+            <h3 className="text-xl font-semibold text-gray-900">Votre CV est prêt !</h3>
             <p className="text-gray-600 max-w-md mx-auto">
-              Consultez l&apos;apercu a droite (ou en dessous sur mobile). Vous pouvez choisir parmi 3 modeles et telecharger votre CV en utilisant le bouton d&apos;impression du navigateur.
+              Consultez l&apos;aperçu à droite (ou en dessous sur mobile). Vous pouvez choisir parmi 3 modèles et télécharger votre CV en utilisant le bouton d&apos;impression du navigateur.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
               <button
                 onClick={() => window.print()}
                 className="btn-primary"
               >
-                Imprimer / Telecharger PDF
+                Imprimer / Télécharger PDF
               </button>
               <button onClick={resetForm} className="btn-secondary text-red-600 border-red-300 hover:bg-red-50">
-                Reinitialiser le formulaire
+                Réinitialiser le formulaire
               </button>
             </div>
           </div>
@@ -765,7 +765,7 @@ export default function FormulaireCV({ cvData, onChange }: FormulaireCVProps) {
               disabled={step === 0}
               className="px-5 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
-              Precedent
+              Précédent
             </button>
             <button onClick={nextStep} className="btn-primary text-sm">
               {step === 5 ? 'Terminer' : 'Suivant'}

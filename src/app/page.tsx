@@ -6,31 +6,31 @@ import { concoursExamples } from '@/data/concours-types';
 import { ministeres } from '@/data/ministeres';
 
 export const metadata: Metadata = {
-  title: 'Emploi Public au Maroc : Concours et Offres 2025',
-  description: 'Emploi public au Maroc : concours de la fonction publique, offres, grille de salaires et generateur de CV gratuit. Reussissez votre carriere.',
+  title: 'Emploi Public au Maroc : Concours et Offres 2026',
+  description: 'Emploi public au Maroc : concours de la fonction publique, offres, grille de salaires et générateur de CV gratuit. Réussissez votre carrière.',
   alternates: { canonical: '/' },
 };
 
 const faqs = [
   {
-    question: 'Comment postuler a un emploi dans la fonction publique au Maroc ?',
-    answer: 'Pour postuler a un emploi public au Maroc, vous devez surveiller les avis de concours publies au Bulletin Officiel et sur les sites des ministeres. Ensuite, vous constituez un dossier de candidature comprenant une demande manuscrite, votre CV, des copies certifiees de vos diplomes, votre CIN et des photos d\'identite. Le dossier doit etre depose avant la date limite indiquee dans l\'avis.',
+    question: 'Comment postuler à un emploi dans la fonction publique au Maroc ?',
+    answer: 'Pour postuler à un emploi public au Maroc, vous devez surveiller les avis de concours publiés au Bulletin Officiel et sur les sites des ministères. Ensuite, vous constituez un dossier de candidature comprenant une demande manuscrite, votre CV, des copies certifiées de vos diplômes, votre CIN et des photos d\'identité. Le dossier doit être déposé avant la date limite indiquée dans l\'avis.',
   },
   {
-    question: 'Quels diplomes sont requis pour la fonction publique marocaine ?',
-    answer: 'Les diplomes requis varient selon l\'echelle de recrutement. L\'echelle 7 necessite le baccalaureat, l\'echelle 9 exige une licence (Bac+3), l\'echelle 10 demande un master ou diplome d\'ingenieur (Bac+5), et l\'echelle 11 requiert un master ou doctorat. Certains postes techniques exigent des diplomes specifiques (medecine, ingenierie, etc.).',
+    question: 'Quels diplômes sont requis pour la fonction publique marocaine ?',
+    answer: 'Les diplômes requis varient selon l\'échelle de recrutement. L\'échelle 7 nécessite le baccalauréat, l\'échelle 9 exige une licence (Bac+3), l\'échelle 10 demande un master ou diplôme d\'ingénieur (Bac+5), et l\'échelle 11 requiert un master ou doctorat. Certains postes techniques exigent des diplômes spécifiques (médecine, ingénierie, etc.).',
   },
   {
     question: 'Quel est le salaire d\'un fonctionnaire au Maroc ?',
-    answer: 'Le salaire net d\'un fonctionnaire marocain varie de 2 700 DH pour l\'echelle 1 a plus de 18 000 DH pour les hauts fonctionnaires (hors echelle). Un cadre a l\'echelle 10 debute a environ 6 300 DH net, tandis qu\'un cadre superieur a l\'echelle 11 demarre a environ 7 650 DH net. Les salaires progressent avec les echelons et l\'anciennete.',
+    answer: 'Le salaire net d\'un fonctionnaire marocain varie de 2 700 DH pour l\'échelle 1 à plus de 18 000 DH pour les hauts fonctionnaires (hors échelle). Un cadre à l\'échelle 10 débute à environ 6 300 DH net, tandis qu\'un cadre supérieur à l\'échelle 11 démarre à environ 7 650 DH net. Les salaires progressent avec les échelons et l\'ancienneté.',
   },
   {
-    question: 'Quelles sont les etapes d\'un concours de la fonction publique au Maroc ?',
-    answer: 'Un concours de la fonction publique comprend 6 etapes : (1) Publication de l\'avis au Bulletin Officiel, (2) Depot du dossier de candidature, (3) Epreuve ecrite (QCM et redaction), (4) Epreuve orale devant un jury, (5) Publication des resultats, (6) Stage probatoire de 1 a 2 ans avant titularisation.',
+    question: 'Quelles sont les étapes d\'un concours de la fonction publique au Maroc ?',
+    answer: 'Un concours de la fonction publique comprend 6 étapes : (1) Publication de l\'avis au Bulletin Officiel, (2) Dépôt du dossier de candidature, (3) Épreuve écrite (QCM et rédaction), (4) Épreuve orale devant un jury, (5) Publication des résultats, (6) Stage probatoire de 1 à 2 ans avant titularisation.',
   },
   {
-    question: 'Comment utiliser le generateur de CV pour la fonction publique ?',
-    answer: 'Notre generateur de CV gratuit vous guide etape par etape : renseignez vos informations personnelles, experiences, formations, competences et langues. Choisissez parmi 3 modeles professionnels (Classique, Moderne, Professionnel) et telechargez votre CV au format PDF via la fonction d\'impression du navigateur. Vos donnees sont sauvegardees localement.',
+    question: 'Comment utiliser le générateur de CV pour la fonction publique ?',
+    answer: 'Notre générateur de CV gratuit vous guide étape par étape : renseignez vos informations personnelles, expériences, formations, compétences et langues. Choisissez parmi 3 modèles professionnels (Classique, Moderne, Professionnel) et téléchargez votre CV au format PDF via la fonction d\'impression du navigateur. Vos données sont sauvegardées localement.',
   },
 ];
 
@@ -62,14 +62,14 @@ export default function HomePage() {
               Emploi Public au Maroc : Concours, Offres et Outils
             </h1>
             <p className="text-lg md:text-xl text-primary-100 mb-8 leading-relaxed">
-              {siteConfig.tagline}. Trouvez les derniers concours, consultez la grille des salaires et creez votre CV professionnel gratuitement.
+              {siteConfig.tagline}. Trouvez les derniers concours, consultez la grille des salaires et créez votre CV professionnel gratuitement.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/concours/" className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-700 font-semibold rounded-lg hover:bg-primary-50 transition-colors text-lg">
                 Voir les concours
               </Link>
               <Link href="/generateur-cv/" className="inline-flex items-center justify-center px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-400 transition-colors border border-primary-400 text-lg">
-                Creer mon CV gratuit
+                Créer mon CV gratuit
               </Link>
             </div>
           </div>
@@ -82,11 +82,11 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-primary-600">{ministeres.length}</div>
-              <div className="text-sm text-gray-600 mt-1">Ministeres et organismes</div>
+              <div className="text-sm text-gray-600 mt-1">Ministères et organismes</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary-600">{concoursExamples.length}+</div>
-              <div className="text-sm text-gray-600 mt-1">Concours references</div>
+              <div className="text-sm text-gray-600 mt-1">Concours référencés</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary-600">{totalPostes.toLocaleString('fr-FR')}</div>
@@ -94,7 +94,7 @@ export default function HomePage() {
             </div>
             <div>
               <div className="text-3xl font-bold text-primary-600">3</div>
-              <div className="text-sm text-gray-600 mt-1">Modeles de CV gratuits</div>
+              <div className="text-sm text-gray-600 mt-1">Modèles de CV gratuits</div>
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function HomePage() {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-title text-center">Outils et ressources</h2>
-          <p className="section-subtitle text-center">Tout ce dont vous avez besoin pour reussir dans la fonction publique</p>
+          <p className="section-subtitle text-center">Tout ce dont vous avez besoin pour réussir dans la fonction publique</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             <Link href="/generateur-cv/" className="card p-8 text-center group">
               <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-200 transition-colors">
@@ -149,8 +149,8 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">Generateur de CV</h3>
-              <p className="text-sm text-gray-600">Creez un CV professionnel gratuitement avec nos 3 modeles optimises pour la fonction publique.</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">Générateur de CV</h3>
+              <p className="text-sm text-gray-600">Créez un CV professionnel gratuitement avec nos 3 modèles optimisés pour la fonction publique.</p>
             </Link>
             <Link href="/salaires-fonction-publique/" className="card p-8 text-center group">
               <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
@@ -159,7 +159,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">Grille des salaires</h3>
-              <p className="text-sm text-gray-600">Consultez les salaires de la fonction publique par echelle, grade et echelon. De l&apos;echelle 1 a hors echelle.</p>
+              <p className="text-sm text-gray-600">Consultez les salaires de la fonction publique par échelle, grade et échelon. De l&apos;échelle 1 à hors échelle.</p>
             </Link>
             <Link href="/ministeres/" className="card p-8 text-center group">
               <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
@@ -167,8 +167,8 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Par ministere</h3>
-              <p className="text-sm text-gray-600">Explorez les {ministeres.length} ministeres et organismes publics. Decouvrez leurs concours et postes disponibles.</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Par ministère</h3>
+              <p className="text-sm text-gray-600">Explorez les {ministeres.length} ministères et organismes publics. Découvrez leurs concours et postes disponibles.</p>
             </Link>
           </div>
         </div>
@@ -176,39 +176,39 @@ export default function HomePage() {
 
       {/* How to succeed */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="section-title">Comment reussir un concours de la fonction publique</h2>
-        <p className="section-subtitle">Guide complet des etapes et conseils pour decrocher un poste dans l&apos;administration publique marocaine</p>
+        <h2 className="section-title">Comment réussir un concours de la fonction publique</h2>
+        <p className="section-subtitle">Guide complet des étapes et conseils pour décrocher un poste dans l&apos;administration publique marocaine</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           {[
             {
               step: '1',
               title: 'Surveillez les annonces',
-              desc: 'Consultez regulierement le Bulletin Officiel, les sites des ministeres et notre plateforme pour ne manquer aucun concours.',
+              desc: 'Consultez régulièrement le Bulletin Officiel, les sites des ministères et notre plateforme pour ne manquer aucun concours.',
             },
             {
               step: '2',
-              title: 'Preparez votre dossier',
-              desc: 'Rassemblez tous les documents necessaires : diplomes, CIN, photos, CV. Utilisez notre generateur de CV pour un dossier professionnel.',
+              title: 'Préparez votre dossier',
+              desc: 'Rassemblez tous les documents nécessaires : diplômes, CIN, photos, CV. Utilisez notre générateur de CV pour un dossier professionnel.',
             },
             {
               step: '3',
-              title: 'Revisez strategiquement',
-              desc: 'Concentrez-vous sur la culture generale, les connaissances de la specialite et les techniques de redaction administrative.',
+              title: 'Révisez stratégiquement',
+              desc: 'Concentrez-vous sur la culture générale, les connaissances de la spécialité et les techniques de rédaction administrative.',
             },
             {
               step: '4',
-              title: 'Reussissez l\'ecrit',
-              desc: 'Maitrisez le QCM, la note de synthese et la dissertation. Gerez bien votre temps et soignez la presentation.',
+              title: 'Réussissez l\'écrit',
+              desc: 'Maîtrisez le QCM, la note de synthèse et la dissertation. Gérez bien votre temps et soignez la présentation.',
             },
             {
               step: '5',
-              title: 'Preparez l\'oral',
-              desc: 'Travaillez votre presentation, vos connaissances du poste et du ministere. Montrez votre motivation pour le service public.',
+              title: 'Préparez l\'oral',
+              desc: 'Travaillez votre présentation, vos connaissances du poste et du ministère. Montrez votre motivation pour le service public.',
             },
             {
               step: '6',
-              title: 'Reussissez le stage',
-              desc: 'Pendant le stage probatoire (1-2 ans), montrez votre engagement et vos competences pour etre titularise.',
+              title: 'Réussissez le stage',
+              desc: 'Pendant le stage probatoire (1-2 ans), montrez votre engagement et vos compétences pour être titularisé.',
             },
           ].map((item) => (
             <div key={item.step} className="flex gap-4">
@@ -232,7 +232,7 @@ export default function HomePage() {
       {/* FAQ */}
       <section className="bg-white py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-title text-center">Questions frequentes</h2>
+          <h2 className="section-title text-center">Questions fréquentes</h2>
           <p className="section-subtitle text-center">Tout ce que vous devez savoir sur l&apos;emploi public au Maroc</p>
           <div className="space-y-4 mt-8">
             {faqs.map((faq, i) => (
@@ -258,52 +258,52 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Emploi Public au Maroc : Guide Complet de la Fonction Publique</h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            L&apos;emploi public au Maroc represente l&apos;un des secteurs les plus recherches par les diplomes marocains. Avec plus de 800 000 fonctionnaires repartis dans les differents ministeres, etablissements publics et collectivites territoriales, la fonction publique marocaine est le premier employeur du pays. Chaque annee, des milliers de concours sont organises pour recruter de nouveaux agents dans des domaines aussi varies que l&apos;education, la sante, la justice, les finances et l&apos;administration territoriale.
+            L&apos;emploi public au Maroc représente l&apos;un des secteurs les plus recherchés par les diplômés marocains. Avec plus de 800 000 fonctionnaires répartis dans les différents ministères, établissements publics et collectivités territoriales, la fonction publique marocaine est le premier employeur du pays. Chaque année, des milliers de concours sont organisés pour recruter de nouveaux agents dans des domaines aussi variés que l&apos;éducation, la santé, la justice, les finances et l&apos;administration territoriale.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Le systeme de la fonction publique au Maroc</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Le système de la fonction publique au Maroc</h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            La fonction publique marocaine est regie par le Dahir n 1-58-008 du 24 fevrier 1958 portant statut general de la fonction publique, ainsi que par de nombreux statuts particuliers propres a chaque corps de fonctionnaires. Le systeme est organise en echelles de remuneration allant de l&apos;echelle 1 (personnel d&apos;execution) a l&apos;echelle 11 (cadres superieurs), avec une categorie hors echelle pour les hauts fonctionnaires. Chaque echelle comprend plusieurs echelons, et la progression de carriere se fait a l&apos;anciennete ou au merite, par le biais de concours internes ou d&apos;examens professionnels.
+            La fonction publique marocaine est régie par le Dahir n 1-58-008 du 24 février 1958 portant statut général de la fonction publique, ainsi que par de nombreux statuts particuliers propres à chaque corps de fonctionnaires. Le système est organisé en échelles de rémunération allant de l&apos;échelle 1 (personnel d&apos;exécution) à l&apos;échelle 11 (cadres supérieurs), avec une catégorie hors échelle pour les hauts fonctionnaires. Chaque échelle comprend plusieurs échelons, et la progression de carrière se fait à l&apos;ancienneté ou au mérite, par le biais de concours internes ou d&apos;examens professionnels.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Les concours de la fonction publique</h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Le concours est la voie principale d&apos;acces a la fonction publique au Maroc. Il garantit l&apos;egalite des chances entre les candidats et assure le recrutement des profils les plus competents. Les concours sont organises par les ministeres et les etablissements publics, et les avis sont publies au Bulletin Officiel ainsi que sur les sites web des institutions concernees. Le processus comprend generalement une epreuve ecrite (QCM et redaction) suivie d&apos;une epreuve orale pour les candidats admissibles.
+            Le concours est la voie principale d&apos;accès à la fonction publique au Maroc. Il garantit l&apos;égalité des chances entre les candidats et assure le recrutement des profils les plus compétents. Les concours sont organisés par les ministères et les établissements publics, et les avis sont publiés au Bulletin Officiel ainsi que sur les sites web des institutions concernées. Le processus comprend généralement une épreuve écrite (QCM et rédaction) suivie d&apos;une épreuve orale pour les candidats admissibles.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Pour reussir un concours de la fonction publique, il est essentiel de bien se preparer. La preparation doit couvrir les connaissances generales (culture generale, actualite marocaine, droit administratif), les connaissances de la specialite (selon le poste vise) et les techniques de redaction administrative. Les candidats doivent egalement maitriser la gestion du temps pendant les epreuves et soigner la presentation de leurs copies.
+            Pour réussir un concours de la fonction publique, il est essentiel de bien se préparer. La préparation doit couvrir les connaissances générales (culture générale, actualité marocaine, droit administratif), les connaissances de la spécialité (selon le poste visé) et les techniques de rédaction administrative. Les candidats doivent également maîtriser la gestion du temps pendant les épreuves et soigner la présentation de leurs copies.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Les principaux employeurs publics</h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Le Ministere de l&apos;Education Nationale est de loin le plus grand employeur public au Maroc, avec environ 300 000 fonctionnaires. Il organise chaque annee des concours massifs pour recruter des professeurs dans toutes les disciplines. Le Ministere de la Sante, avec ses 55 000 fonctionnaires, recrute regulierement des medecins, infirmiers et pharmaciens. Les Forces Armees Royales emploient environ 200 000 personnes, tandis que les collectivites territoriales comptent pres de 150 000 agents.
+            Le Ministère de l&apos;Éducation Nationale est de loin le plus grand employeur public au Maroc, avec environ 300 000 fonctionnaires. Il organise chaque année des concours massifs pour recruter des professeurs dans toutes les disciplines. Le Ministère de la Santé, avec ses 55 000 fonctionnaires, recrute régulièrement des médecins, infirmiers et pharmaciens. Les Forces Armées Royales emploient environ 200 000 personnes, tandis que les collectivités territoriales comptent près de 150 000 agents.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            D&apos;autres ministeres importants incluent le Ministere de l&apos;Interieur (45 000 fonctionnaires), le Ministere des Finances (25 000), le Ministere de la Justice (18 000) et le Ministere de l&apos;Agriculture (15 000). Chacun de ces ministeres offre des carrieres variees et des perspectives d&apos;evolution interessantes pour les candidats motives.
+            D&apos;autres ministères importants incluent le Ministère de l&apos;Intérieur (45 000 fonctionnaires), le Ministère des Finances (25 000), le Ministère de la Justice (18 000) et le Ministère de l&apos;Agriculture (15 000). Chacun de ces ministères offre des carrières variées et des perspectives d&apos;évolution intéressantes pour les candidats motivés.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Les salaires de la fonction publique</h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Les salaires dans la fonction publique marocaine sont determines par l&apos;echelle de remuneration et l&apos;echelon du fonctionnaire. Un agent d&apos;execution a l&apos;echelle 1 percoit un salaire net d&apos;environ 2 700 DH par mois, tandis qu&apos;un cadre a l&apos;echelle 10 debute a environ 6 300 DH net. Les cadres superieurs a l&apos;echelle 11 commencent a environ 7 650 DH net, et les hauts fonctionnaires (hors echelle) peuvent percevoir plus de 18 000 DH net. A ces salaires de base s&apos;ajoutent diverses primes et indemnites : indemnite de residence, indemnite de fonction, allocations familiales, etc.
+            Les salaires dans la fonction publique marocaine sont déterminés par l&apos;échelle de rémunération et l&apos;échelon du fonctionnaire. Un agent d&apos;exécution à l&apos;échelle 1 perçoit un salaire net d&apos;environ 2 700 DH par mois, tandis qu&apos;un cadre à l&apos;échelle 10 débute à environ 6 300 DH net. Les cadres supérieurs à l&apos;échelle 11 commencent à environ 7 650 DH net, et les hauts fonctionnaires (hors échelle) peuvent percevoir plus de 18 000 DH net. À ces salaires de base s&apos;ajoutent diverses primes et indemnités : indemnité de résidence, indemnité de fonction, allocations familiales, etc.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Les avantages de la fonction publique</h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Au-dela du salaire, la fonction publique offre de nombreux avantages : la securite de l&apos;emploi (titularisation apres le stage probatoire), une couverture medicale complete (AMO), une retraite confortable (CMR ou RCAR), des conges payes genereux (30 jours par an), des primes et indemnites variees, ainsi que des possibilites de promotion interne. De plus, les fonctionnaires beneficient d&apos;un equilibre vie professionnelle / vie personnelle generalement favorable, avec des horaires reguliers et la possibilite de mutations geographiques.
+            Au-delà du salaire, la fonction publique offre de nombreux avantages : la sécurité de l&apos;emploi (titularisation après le stage probatoire), une couverture médicale complète (AMO), une retraite confortable (CMR ou RCAR), des congés payés généreux (30 jours par an), des primes et indemnités variées, ainsi que des possibilités de promotion interne. De plus, les fonctionnaires bénéficient d&apos;un équilibre vie professionnelle / vie personnelle généralement favorable, avec des horaires réguliers et la possibilité de mutations géographiques.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Le generateur de CV : votre outil gratuit</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Le générateur de CV : votre outil gratuit</h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Pour maximiser vos chances de reussite, nous mettons a votre disposition un generateur de CV professionnel entierement gratuit. Cet outil vous guide pas a pas dans la creation de votre CV, depuis vos informations personnelles jusqu&apos;a vos competences et langues. Vous pouvez choisir parmi trois modeles professionnels (Classique, Moderne et Professionnel) specialement concus pour les candidatures dans la fonction publique. Vos donnees sont sauvegardees localement dans votre navigateur, et vous pouvez telecharger votre CV au format PDF a tout moment.
+            Pour maximiser vos chances de réussite, nous mettons à votre disposition un générateur de CV professionnel entièrement gratuit. Cet outil vous guide pas à pas dans la création de votre CV, depuis vos informations personnelles jusqu&apos;à vos compétences et langues. Vous pouvez choisir parmi trois modèles professionnels (Classique, Moderne et Professionnel) spécialement conçus pour les candidatures dans la fonction publique. Vos données sont sauvegardées localement dans votre navigateur, et vous pouvez télécharger votre CV au format PDF à tout moment.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Reformes et modernisation</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Réformes et modernisation</h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Le Maroc a engage plusieurs reformes pour moderniser sa fonction publique. La digitalisation des services, la simplification des procedures administratives, la deconcentration et la regionalisation avancee sont autant de chantiers qui transforment l&apos;administration publique marocaine. Ces reformes creent de nouvelles opportunites d&apos;emploi, notamment dans les domaines du numerique, de la gestion de projet et de la communication. La plateforme emploipublic.ma accompagne cette transformation en offrant aux candidats les outils et informations necessaires pour reussir leur integration dans la fonction publique.
+            Le Maroc a engagé plusieurs réformes pour moderniser sa fonction publique. La digitalisation des services, la simplification des procédures administratives, la déconcentration et la régionalisation avancée sont autant de chantiers qui transforment l&apos;administration publique marocaine. Ces réformes créent de nouvelles opportunités d&apos;emploi, notamment dans les domaines du numérique, de la gestion de projet et de la communication. La plateforme emploipublic.ma accompagne cette transformation en offrant aux candidats les outils et informations nécessaires pour réussir leur intégration dans la fonction publique.
           </p>
 
           <p className="text-sm text-gray-500 mt-8 italic">
-            Publie par {siteConfig.author.name} ({siteConfig.author.title}) — Derniere mise a jour : 2025
+            Publié par {siteConfig.author.name} ({siteConfig.author.title}) — Dernière mise à jour : 2026
           </p>
         </article>
       </section>
@@ -311,11 +311,11 @@ export default function HomePage() {
       {/* CTA */}
       <section className="bg-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Pret a lancer votre carriere dans la fonction publique ?</h2>
-          <p className="text-primary-100 mb-8 max-w-2xl mx-auto">Creez votre CV professionnel gratuitement et consultez les concours ouverts des maintenant.</p>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Prêt à lancer votre carrière dans la fonction publique ?</h2>
+          <p className="text-primary-100 mb-8 max-w-2xl mx-auto">Créez votre CV professionnel gratuitement et consultez les concours ouverts dès maintenant.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/generateur-cv/" className="inline-flex items-center justify-center px-8 py-3 bg-white text-primary-700 font-semibold rounded-lg hover:bg-primary-50 transition-colors text-lg">
-              Creer mon CV
+              Créer mon CV
             </Link>
             <Link href="/concours/" className="inline-flex items-center justify-center px-8 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-400 transition-colors border border-primary-400 text-lg">
               Voir les concours

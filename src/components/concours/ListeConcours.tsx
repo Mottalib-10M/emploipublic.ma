@@ -6,8 +6,8 @@ import { ministeres } from '@/data/ministeres';
 
 const statutLabels = {
   ouvert: 'Ouvert',
-  ferme: 'Ferme',
-  a_venir: 'A venir',
+  ferme: 'Fermé',
+  a_venir: 'À venir',
 };
 
 const statutColors = {
@@ -28,7 +28,7 @@ export default function ListeConcours({ filtreMinistere }: ListeConcoursProps) {
 
   const filtered = concoursExamples.filter((c) => {
     if (ministereFilter && c.ministereSlug !== ministereFilter) return false;
-    if (regionFilter && c.region !== regionFilter && c.region !== 'Toutes les regions') return false;
+    if (regionFilter && c.region !== regionFilter && c.region !== 'Toutes les régions') return false;
     if (statutFilter && c.statut !== statutFilter) return false;
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
@@ -51,19 +51,19 @@ export default function ListeConcours({ filtreMinistere }: ListeConcoursProps) {
             <input
               type="text"
               className="input-field"
-              placeholder="Mot-cle..."
+              placeholder="Mot-clé..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
           <div>
-            <label className="label-field">Ministere</label>
+            <label className="label-field">Ministère</label>
             <select
               className="input-field"
               value={ministereFilter}
               onChange={(e) => setMinistereFilter(e.target.value)}
             >
-              <option value="">Tous les ministeres</option>
+              <option value="">Tous les ministères</option>
               {ministeres.map((m) => (
                 <option key={m.slug} value={m.slug}>
                   {m.nomCourt}
@@ -72,14 +72,14 @@ export default function ListeConcours({ filtreMinistere }: ListeConcoursProps) {
             </select>
           </div>
           <div>
-            <label className="label-field">Region</label>
+            <label className="label-field">Région</label>
             <select
               className="input-field"
               value={regionFilter}
               onChange={(e) => setRegionFilter(e.target.value)}
             >
-              <option value="">Toutes les regions</option>
-              {regions.filter((r) => r !== 'Toutes les regions').map((r) => (
+              <option value="">Toutes les régions</option>
+              {regions.filter((r) => r !== 'Toutes les régions').map((r) => (
                 <option key={r} value={r}>
                   {r}
                 </option>
@@ -95,8 +95,8 @@ export default function ListeConcours({ filtreMinistere }: ListeConcoursProps) {
             >
               <option value="">Tous les statuts</option>
               <option value="ouvert">Ouvert</option>
-              <option value="a_venir">A venir</option>
-              <option value="ferme">Ferme</option>
+              <option value="a_venir">À venir</option>
+              <option value="ferme">Fermé</option>
             </select>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function ListeConcours({ filtreMinistere }: ListeConcoursProps) {
 
       {/* Results count */}
       <p className="text-sm text-gray-600 mb-4">
-        {filtered.length} concours trouve{filtered.length > 1 ? 's' : ''}
+        {filtered.length} concours trouvé{filtered.length > 1 ? 's' : ''}
       </p>
 
       {/* Concours cards */}
@@ -146,7 +146,7 @@ export default function ListeConcours({ filtreMinistere }: ListeConcoursProps) {
                   </span>
                 </div>
                 <p className="text-xs text-gray-500 mt-2">
-                  <strong>Diplome requis :</strong> {c.diplomeRequis}
+                  <strong>Diplôme requis :</strong> {c.diplomeRequis}
                 </p>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function ListeConcours({ filtreMinistere }: ListeConcoursProps) {
         ))}
         {filtered.length === 0 && (
           <div className="text-center py-12 text-gray-500">
-            <p className="text-lg font-medium">Aucun concours trouve</p>
+            <p className="text-lg font-medium">Aucun concours trouvé</p>
             <p className="text-sm mt-1">Essayez de modifier vos filtres de recherche</p>
           </div>
         )}

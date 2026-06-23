@@ -21,7 +21,7 @@ export function buildWebApplicationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: 'Generateur de CV - Emploi Public Maroc',
+    name: 'Générateur de CV - Emploi Public Maroc',
     url: `${siteConfig.url}/generateur-cv/`,
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'All',
@@ -30,7 +30,7 @@ export function buildWebApplicationSchema() {
       price: '0',
       priceCurrency: 'MAD',
     },
-    description: 'Creez votre CV professionnel gratuitement pour postuler aux concours de la fonction publique au Maroc.',
+    description: 'Créez votre CV professionnel gratuitement pour postuler aux concours de la fonction publique au Maroc.',
     author: {
       '@type': 'Person',
       name: siteConfig.author.name,

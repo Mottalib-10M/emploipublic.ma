@@ -16,9 +16,9 @@ export interface EchelleData {
 export const echelles: EchelleData[] = [
   {
     echelle: 1,
-    grade: 'Agent d\'execution',
-    categorie: 'Personnel d\'execution',
-    description: 'Personnel d\'execution sans diplome ou avec niveau primaire. Postes : agents de nettoyage, gardiens, manoeuvres.',
+    grade: 'Agent d\'exécution',
+    categorie: 'Personnel d\'exécution',
+    description: 'Personnel d\'exécution sans diplôme ou avec niveau primaire. Postes : agents de nettoyage, gardiens, manœuvres.',
     echelons: [
       { echelon: 1, indice: 100, salaireBrut: 3000, salaireNet: 2700 },
       { echelon: 2, indice: 108, salaireBrut: 3100, salaireNet: 2790 },
@@ -29,9 +29,9 @@ export const echelles: EchelleData[] = [
   },
   {
     echelle: 2,
-    grade: 'Agent d\'execution qualifie',
-    categorie: 'Personnel d\'execution',
-    description: 'Personnel d\'execution qualifie avec certificat d\'etudes primaires. Postes : agents qualifies, ouvriers specialises.',
+    grade: 'Agent d\'exécution qualifié',
+    categorie: 'Personnel d\'exécution',
+    description: 'Personnel d\'exécution qualifié avec certificat d\'études primaires. Postes : agents qualifiés, ouvriers spécialisés.',
     echelons: [
       { echelon: 1, indice: 109, salaireBrut: 3100, salaireNet: 2790 },
       { echelon: 2, indice: 119, salaireBrut: 3250, salaireNet: 2925 },
@@ -43,7 +43,7 @@ export const echelles: EchelleData[] = [
   {
     echelle: 3,
     grade: 'Adjoint technique',
-    categorie: 'Personnel d\'execution',
+    categorie: 'Personnel d\'exécution',
     description: 'Niveau BEPC ou formation professionnelle de base. Postes : adjoints techniques, aides-soignants.',
     echelons: [
       { echelon: 1, indice: 129, salaireBrut: 3350, salaireNet: 3015 },
@@ -56,8 +56,8 @@ export const echelles: EchelleData[] = [
   {
     echelle: 4,
     grade: 'Adjoint administratif',
-    categorie: 'Personnel d\'execution',
-    description: 'Niveau brevet ou diplome professionnel. Postes : adjoints administratifs, agents de bureau qualifies.',
+    categorie: 'Personnel d\'exécution',
+    description: 'Niveau brevet ou diplôme professionnel. Postes : adjoints administratifs, agents de bureau qualifiés.',
     echelons: [
       { echelon: 1, indice: 148, salaireBrut: 3600, salaireNet: 3240 },
       { echelon: 2, indice: 162, salaireBrut: 3780, salaireNet: 3402 },
@@ -69,8 +69,8 @@ export const echelles: EchelleData[] = [
   {
     echelle: 5,
     grade: 'Adjoint administratif principal',
-    categorie: 'Personnel d\'execution',
-    description: 'Niveau baccalaureat non requis mais experience necessaire. Postes : adjoints principaux, secretaires.',
+    categorie: 'Personnel d\'exécution',
+    description: 'Niveau baccalauréat non requis mais expérience nécessaire. Postes : adjoints principaux, secrétaires.',
     echelons: [
       { echelon: 1, indice: 167, salaireBrut: 3850, salaireNet: 3465 },
       { echelon: 2, indice: 183, salaireBrut: 4050, salaireNet: 3645 },
@@ -81,9 +81,9 @@ export const echelles: EchelleData[] = [
   },
   {
     echelle: 6,
-    grade: 'Redacteur stagiaire',
-    categorie: 'Personnel d\'execution',
-    description: 'Niveau baccalaureat. Postes : redacteurs stagiaires, assistants administratifs, agents de saisie qualifies.',
+    grade: 'Rédacteur stagiaire',
+    categorie: 'Personnel d\'exécution',
+    description: 'Niveau baccalauréat. Postes : rédacteurs stagiaires, assistants administratifs, agents de saisie qualifiés.',
     echelons: [
       { echelon: 1, indice: 188, salaireBrut: 4100, salaireNet: 3690 },
       { echelon: 2, indice: 207, salaireBrut: 4330, salaireNet: 3897 },
@@ -94,9 +94,9 @@ export const echelles: EchelleData[] = [
   },
   {
     echelle: 7,
-    grade: 'Redacteur',
-    categorie: 'Personnel de maitrise',
-    description: 'Niveau Bac+1 ou Bac avec concours. Postes : redacteurs, techniciens, infirmiers auxiliaires.',
+    grade: 'Rédacteur',
+    categorie: 'Personnel de maîtrise',
+    description: 'Niveau Bac+1 ou Bac avec concours. Postes : rédacteurs, techniciens, infirmiers auxiliaires.',
     echelons: [
       { echelon: 1, indice: 222, salaireBrut: 4500, salaireNet: 4050 },
       { echelon: 2, indice: 243, salaireBrut: 4750, salaireNet: 4275 },
@@ -107,9 +107,9 @@ export const echelles: EchelleData[] = [
   },
   {
     echelle: 8,
-    grade: 'Redacteur principal',
-    categorie: 'Personnel de maitrise',
-    description: 'Niveau Bac+2 (DEUG, DUT, BTS). Postes : redacteurs principaux, techniciens superieurs, infirmiers diplomes.',
+    grade: 'Rédacteur principal',
+    categorie: 'Personnel de maîtrise',
+    description: 'Niveau Bac+2 (DEUG, DUT, BTS). Postes : rédacteurs principaux, techniciens supérieurs, infirmiers diplômés.',
     echelons: [
       { echelon: 1, indice: 260, salaireBrut: 5000, salaireNet: 4500 },
       { echelon: 2, indice: 284, salaireBrut: 5280, salaireNet: 4752 },
@@ -121,8 +121,8 @@ export const echelles: EchelleData[] = [
   {
     echelle: 9,
     grade: 'Administrateur adjoint',
-    categorie: 'Personnel de maitrise',
-    description: 'Niveau Bac+3 (Licence). Postes : administrateurs adjoints, professeurs du primaire, techniciens specialises.',
+    categorie: 'Personnel de maîtrise',
+    description: 'Niveau Bac+3 (Licence). Postes : administrateurs adjoints, professeurs du primaire, techniciens spécialisés.',
     echelons: [
       { echelon: 1, indice: 309, salaireBrut: 5600, salaireNet: 5040 },
       { echelon: 2, indice: 337, salaireBrut: 5900, salaireNet: 5310 },
@@ -135,7 +135,7 @@ export const echelles: EchelleData[] = [
     echelle: 10,
     grade: 'Cadre / Administrateur',
     categorie: 'Cadres',
-    description: 'Niveau Bac+4/5 (Master, diplome d\'ingenieur). Postes : cadres, administrateurs, professeurs du secondaire, ingenieurs d\'Etat.',
+    description: 'Niveau Bac+4/5 (Master, diplôme d\'ingénieur). Postes : cadres, administrateurs, professeurs du secondaire, ingénieurs d\'État.',
     echelons: [
       { echelon: 1, indice: 382, salaireBrut: 7000, salaireNet: 6300 },
       { echelon: 2, indice: 416, salaireBrut: 7400, salaireNet: 6660 },
@@ -147,9 +147,9 @@ export const echelles: EchelleData[] = [
   },
   {
     echelle: 11,
-    grade: 'Cadre superieur / Administrateur principal',
-    categorie: 'Cadres superieurs',
-    description: 'Niveau Bac+5 et plus (Doctorat, grandes ecoles). Postes : cadres superieurs, professeurs de l\'enseignement superieur, inspecteurs, medecins specialistes.',
+    grade: 'Cadre supérieur / Administrateur principal',
+    categorie: 'Cadres supérieurs',
+    description: 'Niveau Bac+5 et plus (Doctorat, grandes écoles). Postes : cadres supérieurs, professeurs de l\'enseignement supérieur, inspecteurs, médecins spécialistes.',
     echelons: [
       { echelon: 1, indice: 509, salaireBrut: 8500, salaireNet: 7650 },
       { echelon: 2, indice: 542, salaireBrut: 8900, salaireNet: 8010 },
@@ -161,9 +161,9 @@ export const echelles: EchelleData[] = [
   },
   {
     echelle: 'HE',
-    grade: 'Haut fonctionnaire / Hors echelle',
+    grade: 'Haut fonctionnaire / Hors échelle',
     categorie: 'Hauts fonctionnaires',
-    description: 'Postes de direction et de responsabilite. Directeurs, secretaires generaux, walis, ambassadeurs, presidents d\'universites.',
+    description: 'Postes de direction et de responsabilité. Directeurs, secrétaires généraux, walis, ambassadeurs, présidents d\'universités.',
     echelons: [
       { echelon: 1, indice: 704, salaireBrut: 12000, salaireNet: 10800 },
       { echelon: 2, indice: 746, salaireBrut: 13500, salaireNet: 12150 },

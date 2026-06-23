@@ -3,8 +3,8 @@ import { siteConfig } from '@/lib/config';
 import { buildWebApplicationSchema, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Generateur de CV Gratuit - Fonction Publique Maroc',
-  description: 'Creez votre CV professionnel gratuitement pour la fonction publique marocaine. 3 modeles, export PDF, sauvegarde automatique.',
+  title: 'Générateur de CV Gratuit - Fonction Publique Maroc',
+  description: 'Créez votre CV professionnel gratuitement pour la fonction publique marocaine. 3 modèles, export PDF, sauvegarde automatique.',
   alternates: { canonical: '/generateur-cv/' },
 };
 
@@ -12,7 +12,7 @@ export default function GenerateurCVLayout({ children }: { children: React.React
   const webAppSchema = buildWebApplicationSchema();
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Accueil', url: siteConfig.url },
-    { name: 'Generateur de CV', url: `${siteConfig.url}/generateur-cv/` },
+    { name: 'Générateur de CV', url: `${siteConfig.url}/generateur-cv/` },
   ]);
 
   return (

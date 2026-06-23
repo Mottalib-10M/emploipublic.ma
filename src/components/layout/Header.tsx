@@ -34,7 +34,7 @@ export default function Header() {
               href="/generateur-cv/"
               className="ml-2 px-4 py-2 bg-primary-600 text-white text-sm font-semibold rounded-lg hover:bg-primary-700 transition-colors"
             >
-              Creer mon CV
+              Créer mon CV
             </Link>
           </nav>
 
@@ -72,7 +72,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="block w-full text-center mt-2 px-4 py-2 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700"
             >
-              Creer mon CV
+              Créer mon CV
             </Link>
           </div>
         </div>

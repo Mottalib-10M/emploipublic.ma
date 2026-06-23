@@ -14,16 +14,16 @@ export default function GrilleSalaires() {
     <div>
       {/* Filter */}
       <div className="mb-6">
-        <label className="label-field">Filtrer par echelle</label>
+        <label className="label-field">Filtrer par échelle</label>
         <select
           className="input-field max-w-xs"
           value={selectedEchelle}
           onChange={(e) => setSelectedEchelle(e.target.value)}
         >
-          <option value="all">Toutes les echelles</option>
+          <option value="all">Toutes les échelles</option>
           {echelles.map((e) => (
             <option key={String(e.echelle)} value={String(e.echelle)}>
-              Echelle {e.echelle} - {e.grade}
+              Échelle {e.echelle} - {e.grade}
             </option>
           ))}
         </select>
@@ -34,7 +34,7 @@ export default function GrilleSalaires() {
         {filtered.map((ech) => (
           <div key={String(ech.echelle)} className="card overflow-hidden">
             <div className="bg-primary-600 text-white px-6 py-4">
-              <h3 className="text-lg font-bold">Echelle {ech.echelle} — {ech.grade}</h3>
+              <h3 className="text-lg font-bold">Échelle {ech.echelle} — {ech.grade}</h3>
               <p className="text-primary-100 text-sm mt-1">{ech.categorie}</p>
             </div>
             <div className="px-6 py-3 bg-primary-50 text-sm text-gray-700">
@@ -44,10 +44,10 @@ export default function GrilleSalaires() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-gray-50">
-                    <th className="px-6 py-3 text-left font-semibold text-gray-700">Echelon</th>
+                    <th className="px-6 py-3 text-left font-semibold text-gray-700">Échelon</th>
                     <th className="px-6 py-3 text-left font-semibold text-gray-700">Indice</th>
                     <th className="px-6 py-3 text-left font-semibold text-gray-700">Salaire brut (DH)</th>
-                    <th className="px-6 py-3 text-left font-semibold text-gray-700">Salaire net estime (DH)</th>
+                    <th className="px-6 py-3 text-left font-semibold text-gray-700">Salaire net estimé (DH)</th>
                   </tr>
                 </thead>
                 <tbody>

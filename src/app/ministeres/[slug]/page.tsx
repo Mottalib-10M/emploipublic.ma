@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!ministere) return {};
   return {
     title: `${ministere.nomCourt} : Concours et Emploi Public`,
-    description: `Concours et emploi au ${ministere.nomCourt}. ${ministere.effectif}, departements, types de concours et echelles salariales.`,
+    description: `Concours et emploi au ${ministere.nomCourt}. ${ministere.effectif}, départements, types de concours et échelles salariales.`,
     alternates: { canonical: `/ministeres/${slug}/` },
   };
 }
@@ -32,7 +32,7 @@ export default async function MinisterePage({ params }: Props) {
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Accueil', url: siteConfig.url },
-    { name: 'Ministeres', url: `${siteConfig.url}/ministeres/` },
+    { name: 'Ministères', url: `${siteConfig.url}/ministeres/` },
     { name: ministere.nomCourt, url: `${siteConfig.url}/ministeres/${slug}/` },
   ]);
 
@@ -50,7 +50,7 @@ export default async function MinisterePage({ params }: Props) {
           <nav className="text-sm text-primary-200 mb-4">
             <Link href="/" className="hover:text-white">Accueil</Link>
             <span className="mx-2">/</span>
-            <Link href="/ministeres/" className="hover:text-white">Ministeres</Link>
+            <Link href="/ministeres/" className="hover:text-white">Ministères</Link>
             <span className="mx-2">/</span>
             <span className="text-white">{ministere.nomCourt}</span>
           </nav>
@@ -64,12 +64,12 @@ export default async function MinisterePage({ params }: Props) {
           {/* Main content */}
           <div className="lg:col-span-2 space-y-8">
             <div className="card p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Presentation</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-4">Présentation</h2>
               <p className="text-gray-700 leading-relaxed">{ministere.description}</p>
             </div>
 
             <div className="card p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Departements et directions</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-4">Départements et directions</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {ministere.departements.map((dep) => (
                   <div key={dep} className="flex items-center gap-2 text-sm text-gray-700">
@@ -82,7 +82,7 @@ export default async function MinisterePage({ params }: Props) {
 
             {relatedConcours.length > 0 && (
               <div className="card p-6">
-                <h2 className="text-xl font-bold text-gray-900 mb-4">Concours recents et a venir</h2>
+                <h2 className="text-xl font-bold text-gray-900 mb-4">Concours récents et à venir</h2>
                 <div className="space-y-4">
                   {relatedConcours.map((c) => (
                     <div key={c.id} className="border border-gray-200 rounded-lg p-4">
@@ -92,7 +92,7 @@ export default async function MinisterePage({ params }: Props) {
                           c.statut === 'a_venir' ? 'bg-yellow-100 text-yellow-800' :
                           'bg-red-100 text-red-800'
                         }`}>
-                          {c.statut === 'ouvert' ? 'Ouvert' : c.statut === 'a_venir' ? 'A venir' : 'Ferme'}
+                          {c.statut === 'ouvert' ? 'Ouvert' : c.statut === 'a_venir' ? 'À venir' : 'Fermé'}
                         </span>
                         <span className="text-xs text-gray-500">{c.echelle}</span>
                       </div>
@@ -113,14 +113,14 @@ export default async function MinisterePage({ params }: Props) {
           {/* Sidebar */}
           <div className="space-y-6">
             <div className="card p-6">
-              <h3 className="font-bold text-gray-900 mb-3">Informations cles</h3>
+              <h3 className="font-bold text-gray-900 mb-3">Informations clés</h3>
               <dl className="space-y-3 text-sm">
                 <div>
                   <dt className="text-gray-500">Effectif</dt>
                   <dd className="font-medium text-gray-900">{ministere.effectif}</dd>
                 </div>
                 <div>
-                  <dt className="text-gray-500">Echelles de recrutement</dt>
+                  <dt className="text-gray-500">Échelles de recrutement</dt>
                   <dd className="font-medium text-gray-900">{ministere.echelles}</dd>
                 </div>
                 <div>
@@ -149,12 +149,12 @@ export default async function MinisterePage({ params }: Props) {
             </div>
 
             <div className="card p-6 bg-primary-50">
-              <h3 className="font-bold text-gray-900 mb-2">Preparez votre candidature</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Préparez votre candidature</h3>
               <p className="text-sm text-gray-600 mb-4">
-                Creez un CV professionnel gratuit pour postuler aux concours du {ministere.nomCourt}.
+                Créez un CV professionnel gratuit pour postuler aux concours du {ministere.nomCourt}.
               </p>
               <Link href="/generateur-cv/" className="btn-primary text-sm w-full justify-center">
-                Creer mon CV
+                Créer mon CV
               </Link>
             </div>
           </div>
