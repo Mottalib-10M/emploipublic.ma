@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ministere = getMinistereBySlug(slug);
   if (!ministere) return {};
   return {
-    title: `${ministere.nomCourt} : Concours et Emploi Public`,
+    title: `${ministere.nomCourt} : Concours et Emploi Public au Maroc`,
     description: `Concours et emploi au ${ministere.nomCourt}. ${ministere.effectif}, départements, types de concours et échelles salariales.`,
     alternates: { canonical: `/ministeres/${slug}/` },
   };
@@ -47,7 +47,7 @@ export default async function MinisterePage({ params }: Props) {
 
       <section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-sm text-primary-200 mb-4">
+          <nav aria-label="Fil d'Ariane" className="text-sm text-primary-200 mb-4">
             <Link href="/" className="hover:text-white">Accueil</Link>
             <span className="mx-2">/</span>
             <Link href="/ministeres/" className="hover:text-white">Ministères</Link>

@@ -5,6 +5,29 @@ import { CVData, emptyCVData } from '@/lib/cv-engine';
 import FormulaireCV from '@/components/cv/FormulaireCV';
 import CVPreview from '@/components/cv/CVPreview';
 
+const cvFaqs = [
+  {
+    question: 'Le générateur de CV est-il vraiment gratuit et sans inscription ?',
+    answer: 'Oui, notre générateur de CV est 100 % gratuit et ne nécessite aucune inscription ni création de compte. Vous pouvez créer, personnaliser et télécharger votre CV au format PDF autant de fois que vous le souhaitez, sans aucune limitation ni filigrane.',
+  },
+  {
+    question: 'Mes données personnelles sont-elles protégées dans le générateur de CV ?',
+    answer: 'Absolument. Toutes vos données restent dans votre navigateur (localStorage). Aucune information personnelle n\'est envoyée à nos serveurs. Vos données sont sauvegardées localement pour que vous puissiez reprendre la création de votre CV plus tard, et vous pouvez les supprimer à tout moment en effaçant les données de votre navigateur.',
+  },
+  {
+    question: 'Quels modèles de CV sont disponibles pour la fonction publique ?',
+    answer: 'Nous proposons trois modèles professionnels adaptés à la fonction publique marocaine : le modèle Classique (sobre et traditionnel, idéal pour les ministères conservateurs), le modèle Moderne (design actuel avec une mise en page épurée) et le modèle Professionnel (accent sur les compétences et l\'expérience). Chaque modèle est optimisé pour l\'impression A4.',
+  },
+  {
+    question: 'Comment télécharger mon CV en format PDF ?',
+    answer: 'Une fois votre CV complété, cliquez sur le bouton "Imprimer / PDF" situé au-dessus de l\'aperçu. La boîte de dialogue d\'impression de votre navigateur s\'ouvrira. Sélectionnez "Enregistrer au format PDF" comme destination d\'impression. Le document sera généré au format A4, prêt à être joint à votre dossier de candidature.',
+  },
+  {
+    question: 'Quelles sections doit contenir un CV pour un concours de la fonction publique ?',
+    answer: 'Un CV pour la fonction publique marocaine doit inclure : vos informations personnelles complètes (état civil, adresse, téléphone, email), un objectif professionnel lié au poste visé, votre formation et diplômes avec mentions, vos expériences professionnelles détaillées, vos compétences techniques et informatiques, vos langues parlées (arabe, français, anglais, amazigh), et éventuellement vos centres d\'intérêt. Notre générateur vous guide à travers toutes ces sections.',
+  },
+];
+
 export default function GenerateurCVPage() {
   const [cvData, setCvData] = useState<CVData>(emptyCVData);
 
@@ -22,7 +45,7 @@ export default function GenerateurCVPage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <nav className="text-sm text-gray-500 mb-6">
+        <nav aria-label="Fil d&#39;Ariane" className="text-sm text-gray-500 mb-6">
           <a href="/" className="hover:text-primary-600">Accueil</a>
           <span className="mx-2">/</span>
           <span className="text-gray-900">Générateur de CV</span>
@@ -70,7 +93,7 @@ export default function GenerateurCVPage() {
           </div>
         </section>
 
-        {/* SEO Content */}
+        {/* SEO Content - Expanded to 1500+ chars */}
         <section className="mt-12">
           <article className="prose prose-gray max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Créer un CV pour la fonction publique au Maroc</h2>
@@ -80,10 +103,36 @@ export default function GenerateurCVPage() {
             <p className="text-gray-700 leading-relaxed mb-4">
               Pour les candidatures à la fonction publique, votre CV doit inclure certaines informations spécifiques : votre état civil complet (prénom, nom, date de naissance, nationalité, situation familiale), vos coordonnées, un objectif professionnel clair lié au poste visé, vos formations et diplômes (en précisant les établissements et les mentions), vos expériences professionnelles détaillées, vos compétences techniques et linguistiques, ainsi que vos certifications et centres d&apos;intérêt. Notre outil vous guide à travers chacune de ces sections pour ne rien oublier.
             </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Le format du CV compte autant que son contenu. Les recruteurs de la fonction publique apprécient les CV sobres, bien structurés et aérés. Évitez les couleurs excessives, les polices fantaisistes et les mises en page trop originales. Nos trois modèles ont été conçus spécifiquement pour répondre aux attentes du secteur public marocain : le modèle Classique pour les postes traditionnels dans les ministères, le modèle Moderne pour les organismes publics innovants et le modèle Professionnel pour mettre en avant une expérience riche. Chaque modèle respecte le format A4 standard et produit un rendu imprimable de qualité.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Un bon CV pour la fonction publique doit être concis (une à deux pages maximum), chronologique (du plus récent au plus ancien) et vérifiable. Mentionnez toujours les dates exactes de vos diplômes et expériences, les noms complets des établissements et entreprises, et les intitulés précis de vos postes. Si vous parlez plusieurs langues, précisez votre niveau (courant, professionnel, notions) pour chacune, en particulier l&apos;arabe, le français et l&apos;anglais, langues couramment utilisées dans l&apos;administration marocaine.
+            </p>
             <p className="text-sm text-gray-500 mt-6 italic">
               Outil développé par Mottalib Radif (MBA INSEAD)
             </p>
           </article>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Questions fréquentes sur le générateur de CV</h2>
+          <div className="space-y-4 max-w-3xl">
+            {cvFaqs.map((faq, i) => (
+              <details key={i} className="group border border-gray-200 rounded-lg">
+                <summary className="px-6 py-4 cursor-pointer font-medium text-gray-900 hover:text-primary-600 transition-colors list-none flex items-center justify-between">
+                  {faq.question}
+                  <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-4 text-sm text-gray-600 leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
         </section>
       </div>
     </>

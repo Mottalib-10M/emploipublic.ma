@@ -6,7 +6,17 @@ export function buildOrganizationSchema() {
     '@type': 'Organization',
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/logo.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteConfig.url}/og-default.png`,
+      width: 1200,
+      height: 630,
+    },
+    founder: {
+      '@type': 'Person',
+      name: siteConfig.author.name,
+      jobTitle: siteConfig.author.title,
+    },
     contactPoint: {
       '@type': 'ContactPoint',
       email: siteConfig.contact,
@@ -14,6 +24,23 @@ export function buildOrganizationSchema() {
       availableLanguage: 'French',
     },
     sameAs: [],
+  };
+}
+
+export function buildWebSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteConfig.name,
+    url: siteConfig.url,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${siteConfig.url}/concours/?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   };
 }
 

@@ -20,7 +20,7 @@ export default function Header() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-1">
+          <nav aria-label="Navigation principale" className="hidden md:flex items-center gap-1">
             {siteConfig.nav.map((item) => (
               <Link
                 key={item.href}
@@ -41,7 +41,7 @@ export default function Header() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-gray-600 hover:text-gray-900"
-            aria-label="Menu"
+            aria-label="Ouvrir le menu de navigation"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
@@ -56,7 +56,7 @@ export default function Header() {
 
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-gray-200 bg-white">
-          <div className="px-4 py-3 space-y-1">
+          <nav aria-label="Navigation mobile" className="px-4 py-3 space-y-1">
             {siteConfig.nav.map((item) => (
               <Link
                 key={item.href}
@@ -74,7 +74,7 @@ export default function Header() {
             >
               Créer mon CV
             </Link>
-          </div>
+          </nav>
         </div>
       )}
     </header>

@@ -4,7 +4,7 @@ import { siteConfig } from '@/lib/config';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Lettre de Motivation Fonction Publique Maroc : guide et modèle',
+  title: 'Lettre de Motivation Fonction Publique Maroc : Guide 2026',
   description: 'Comment rédiger une lettre de motivation pour un concours de la fonction publique au Maroc. Structure idéale, modèle complet et erreurs courantes à éviter.',
   alternates: { canonical: '/guides/lettre-motivation-fonction-publique/' },
 };
@@ -30,7 +30,7 @@ export default function GuideLettreMotivation() {
 
       <section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-sm text-primary-200 mb-4">
+          <nav aria-label="Fil d'Ariane" className="text-sm text-primary-200 mb-4">
             <Link href="/" className="hover:text-white">Accueil</Link>
             <span className="mx-2">/</span>
             <span className="text-white">Guide</span>
