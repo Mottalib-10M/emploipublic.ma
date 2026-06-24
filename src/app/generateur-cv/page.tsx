@@ -22,6 +22,11 @@ export default function GenerateurCVPage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <nav className="text-sm text-gray-500 mb-6">
+          <a href="/" className="hover:text-primary-600">Accueil</a>
+          <span className="mx-2">/</span>
+          <span className="text-gray-900">Générateur de CV</span>
+        </nav>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
             <FormulaireCV cvData={cvData} onChange={setCvData} />

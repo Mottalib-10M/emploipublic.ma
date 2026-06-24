@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
 import { buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Mentions Légales - Emploi Public Maroc',
-  description: 'Mentions légales du site emploipublic.ma. Informations sur l\'éditeur, l\'hébergement et les conditions d\'utilisation.',
+  title: 'Mentions Légales, confidentialité et conditions d\'utilisation',
+  description: 'Mentions légales du site emploipublic.ma : éditeur, hébergement, propriété intellectuelle, protection des données personnelles et conditions d\'utilisation.',
   alternates: { canonical: '/mentions-legales/' },
 };
 
@@ -25,6 +26,11 @@ export default function MentionsLegalesPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <nav className="text-sm text-gray-500 mb-6">
+          <Link href="/" className="hover:text-primary-600">Accueil</Link>
+          <span className="mx-2">/</span>
+          <span className="text-gray-900">Mentions Légales</span>
+        </nav>
         <article className="prose prose-gray max-w-none">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Éditeur du site</h2>
           <p className="text-gray-700 leading-relaxed mb-4">

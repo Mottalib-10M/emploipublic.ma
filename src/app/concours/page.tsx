@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
 import { buildBreadcrumbSchema } from '@/lib/seo';
 import { concoursProcess } from '@/data/concours-types';
 import ListeConcours from '@/components/concours/ListeConcours';
 
 export const metadata: Metadata = {
-  title: 'Concours de la Fonction Publique au Maroc 2026',
-  description: 'Liste des concours de la fonction publique au Maroc 2026. Trouvez les concours ouverts par ministère, région et échelle.',
+  title: 'Concours Fonction Publique Maroc 2026 : liste et calendrier',
+  description: 'Liste complète des concours de la fonction publique au Maroc 2026. Filtrez par ministère, région et échelle. Dates limites et nombre de postes disponibles.',
   alternates: { canonical: '/concours/' },
 };
 
@@ -35,6 +36,11 @@ export default function ConcoursPage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <nav className="text-sm text-gray-500 mb-6">
+          <Link href="/" className="hover:text-primary-600">Accueil</Link>
+          <span className="mx-2">/</span>
+          <span className="text-gray-900">Concours</span>
+        </nav>
         <ListeConcours />
 
         {/* Concours Process */}

@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
 import { buildBreadcrumbSchema } from '@/lib/seo';
 import GrilleMinisteres from '@/components/emploi/GrilleMinisteres';
 
 export const metadata: Metadata = {
-  title: 'Ministères et Organismes Publics au Maroc',
-  description: 'Découvrez les ministères et organismes publics marocains : concours, postes, effectifs et types de recrutement par institution.',
+  title: 'Ministères et Organismes Publics au Maroc : annuaire complet',
+  description: 'Annuaire des ministères et organismes publics marocains. Retrouvez concours ouverts, effectifs, postes disponibles et types de recrutement par institution.',
   alternates: { canonical: '/ministeres/' },
 };
 
@@ -34,6 +35,11 @@ export default function MinisteresPage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <nav className="text-sm text-gray-500 mb-6">
+          <Link href="/" className="hover:text-primary-600">Accueil</Link>
+          <span className="mx-2">/</span>
+          <span className="text-gray-900">Ministères</span>
+        </nav>
         <GrilleMinisteres />
 
         <section className="mt-16">

@@ -4,8 +4,8 @@ import { siteConfig } from '@/lib/config';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Salaires Fonction Publique Maroc : Guide Complet',
-  description: 'Guide complet des salaires de la fonction publique au Maroc. Échelles, grades, primes, indemnités et évolution de carrière détaillés.',
+  title: 'Salaires Fonction Publique Maroc : Guide Complet et Détaillé',
+  description: 'Guide complet des salaires de la fonction publique au Maroc : échelles 1 à 11, grades, primes, indemnités, retenues et perspectives d\'évolution de carrière.',
   alternates: { canonical: '/guides/salaires-fonction-publique-maroc/' },
 };
 
@@ -38,7 +38,7 @@ export default function GuideSalaires() {
           <h1 className="text-3xl md:text-4xl font-extrabold mb-3">
             Guide Complet des Salaires de la Fonction Publique au Maroc
           </h1>
-          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}) — Février 2026</p>
+          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}), février 2026</p>
         </div>
       </section>
 
@@ -139,7 +139,7 @@ export default function GuideSalaires() {
         </div>
 
         <p className="text-sm text-gray-500 mt-8 italic">
-          Par {siteConfig.author.name} ({siteConfig.author.title}) — Publié le 1er février 2026
+          Par {siteConfig.author.name} ({siteConfig.author.title}), publié le 1er février 2026
         </p>
       </article>
     </>

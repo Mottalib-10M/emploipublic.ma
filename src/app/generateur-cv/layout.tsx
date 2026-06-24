@@ -3,8 +3,8 @@ import { siteConfig } from '@/lib/config';
 import { buildWebApplicationSchema, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Générateur de CV Gratuit - Fonction Publique Maroc',
-  description: 'Créez votre CV professionnel gratuitement pour la fonction publique marocaine. 3 modèles, export PDF, sauvegarde automatique.',
+  title: 'Générateur de CV Gratuit pour la Fonction Publique au Maroc',
+  description: 'Créez votre CV professionnel gratuitement pour la fonction publique marocaine. Trois modèles optimisés, export PDF instantané et sauvegarde automatique.',
   alternates: { canonical: '/generateur-cv/' },
 };
 

@@ -4,8 +4,8 @@ import { siteConfig } from '@/lib/config';
 import { buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'À Propos - Emploi Public Maroc',
-  description: 'À propos d\'Emploi Public Maroc : notre mission, notre équipe et notre engagement pour aider les Marocains à intégrer la fonction publique.',
+  title: 'À Propos : notre mission et notre équipe éditoriale',
+  description: 'Découvrez la mission d\'Emploi Public Maroc, notre équipe éditoriale et notre engagement pour aider les candidats marocains à intégrer la fonction publique.',
   alternates: { canonical: '/a-propos/' },
 };
 
@@ -27,6 +27,11 @@ export default function AProposPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <nav className="text-sm text-gray-500 mb-6">
+          <Link href="/" className="hover:text-primary-600">Accueil</Link>
+          <span className="mx-2">/</span>
+          <span className="text-gray-900">À Propos</span>
+        </nav>
         <article className="prose prose-gray max-w-none">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Notre mission</h2>
           <p className="text-gray-700 leading-relaxed mb-4">

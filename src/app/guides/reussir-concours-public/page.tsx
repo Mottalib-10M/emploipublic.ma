@@ -5,7 +5,7 @@ import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Comment Réussir un Concours de la Fonction Publique',
-  description: 'Guide complet pour réussir un concours de la fonction publique au Maroc. Préparation, épreuves, conseils et stratégies.',
+  description: 'Guide complet pour réussir un concours de la fonction publique au Maroc : préparation stratégique, épreuves écrites et orales, conseils et erreurs à éviter.',
   alternates: { canonical: '/guides/reussir-concours-public/' },
 };
 
@@ -38,7 +38,7 @@ export default function GuideReussirConcours() {
           <h1 className="text-3xl md:text-4xl font-extrabold mb-3">
             Comment Réussir un Concours de la Fonction Publique au Maroc
           </h1>
-          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}) — Janvier 2026</p>
+          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}), janvier 2026</p>
         </div>
       </section>
 
@@ -140,7 +140,7 @@ export default function GuideReussirConcours() {
         </div>
 
         <p className="text-sm text-gray-500 mt-8 italic">
-          Par {siteConfig.author.name} ({siteConfig.author.title}) — Publié le 15 janvier 2026
+          Par {siteConfig.author.name} ({siteConfig.author.title}), publié le 15 janvier 2026
         </p>
       </article>
     </>

@@ -6,8 +6,8 @@ import { concoursExamples } from '@/data/concours-types';
 import { ministeres } from '@/data/ministeres';
 
 export const metadata: Metadata = {
-  title: 'Emploi Public au Maroc : Concours et Offres 2026',
-  description: 'Emploi public au Maroc : concours de la fonction publique, offres, grille de salaires et générateur de CV gratuit. Réussissez votre carrière.',
+  title: 'Emploi Public au Maroc : Concours, Offres et Outils 2026',
+  description: 'Emploi public au Maroc : concours de la fonction publique, offres par ministère, grille des salaires et générateur de CV gratuit. Réussissez votre carrière.',
   alternates: { canonical: '/' },
 };
 
@@ -303,7 +303,7 @@ export default function HomePage() {
           </p>
 
           <p className="text-sm text-gray-500 mt-8 italic">
-            Publié par {siteConfig.author.name} ({siteConfig.author.title}) — Dernière mise à jour : 2026
+            Publié par {siteConfig.author.name} ({siteConfig.author.title}), dernière mise à jour : 2026
           </p>
         </article>
       </section>

@@ -4,8 +4,8 @@ import { siteConfig } from '@/lib/config';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Préparer l\'Entretien Oral du Concours Public',
-  description: 'Guide complet pour préparer et réussir l\'épreuve orale d\'un concours de la fonction publique au Maroc. Conseils, questions et erreurs.',
+  title: 'Préparer l\'Entretien Oral d\'un Concours de Fonction Publique',
+  description: 'Guide détaillé pour préparer et réussir l\'épreuve orale d\'un concours de la fonction publique au Maroc. Questions fréquentes, conseils et erreurs à éviter.',
   alternates: { canonical: '/guides/preparer-entretien-oral/' },
 };
 
@@ -38,7 +38,7 @@ export default function GuideEntretienOral() {
           <h1 className="text-3xl md:text-4xl font-extrabold mb-3">
             Préparer l&apos;Entretien Oral d&apos;un Concours de la Fonction Publique
           </h1>
-          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}) — Janvier 2026</p>
+          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}), janvier 2026</p>
         </div>
       </section>
 
@@ -92,10 +92,10 @@ export default function GuideEntretienOral() {
 
         <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">7 à 10. Autres questions fréquentes</h3>
         <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-2">
-          <li>&quot;Que pensez-vous de la digitalisation de l&apos;administration ?&quot; — Montrez votre ouverture à la modernisation et votre culture numérique.</li>
-          <li>&quot;Comment travaillez-vous en équipe ?&quot; — Donnez des exemples concrets de collaboration réussie.</li>
-          <li>&quot;Que feriez-vous dans telle situation professionnelle ?&quot; — Restez pragmatique, respectueux de la hiérarchie et orienté solutions.</li>
-          <li>&quot;Avez-vous des questions ?&quot; — Oui, toujours ! Préparez 2-3 questions pertinentes sur le poste, l&apos;équipe ou les projets du ministère.</li>
+          <li>&quot;Que pensez-vous de la digitalisation de l&apos;administration ?&quot; : montrez votre ouverture à la modernisation et votre culture numérique.</li>
+          <li>&quot;Comment travaillez-vous en équipe ?&quot; : donnez des exemples concrets de collaboration réussie.</li>
+          <li>&quot;Que feriez-vous dans telle situation professionnelle ?&quot; : restez pragmatique, respectueux de la hiérarchie et orienté solutions.</li>
+          <li>&quot;Avez-vous des questions ?&quot; : oui, toujours ! Préparez 2-3 questions pertinentes sur le poste, l&apos;équipe ou les projets du ministère.</li>
         </ul>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Conseils pratiques pour le jour J</h2>
@@ -134,7 +134,7 @@ export default function GuideEntretienOral() {
         </div>
 
         <p className="text-sm text-gray-500 mt-8 italic">
-          Par {siteConfig.author.name} ({siteConfig.author.title}) — Publié le 20 janvier 2026
+          Par {siteConfig.author.name} ({siteConfig.author.title}), publié le 20 janvier 2026
         </p>
       </article>
     </>

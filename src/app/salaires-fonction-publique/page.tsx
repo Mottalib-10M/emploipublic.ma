@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
 import { buildBreadcrumbSchema } from '@/lib/seo';
 import GrilleSalaires from '@/components/salaires/GrilleSalaires';
 
 export const metadata: Metadata = {
-  title: 'Salaires Fonction Publique Maroc : Grille 2026',
-  description: 'Grille des salaires de la fonction publique au Maroc 2026. Salaires par échelle, grade et échelon. De 3 000 DH à 20 000 DH.',
+  title: 'Salaires Fonction Publique Maroc 2026 : Grille par échelle',
+  description: 'Grille complète des salaires de la fonction publique au Maroc 2026. Salaires nets et bruts par échelle, grade et échelon, de 3 000 DH à plus de 20 000 DH.',
   alternates: { canonical: '/salaires-fonction-publique/' },
 };
 
@@ -34,6 +35,11 @@ export default function SalairesPage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <nav className="text-sm text-gray-500 mb-6">
+          <Link href="/" className="hover:text-primary-600">Accueil</Link>
+          <span className="mx-2">/</span>
+          <span className="text-gray-900">Salaires Fonction Publique</span>
+        </nav>
         <GrilleSalaires />
 
         {/* Explanation */}
@@ -62,7 +68,7 @@ export default function SalairesPage() {
             </p>
 
             <p className="text-sm text-gray-500 mt-8 italic">
-              Grille indicative. Par {siteConfig.author.name} ({siteConfig.author.title}) — Mise à jour : 2026
+              Grille indicative. Par {siteConfig.author.name} ({siteConfig.author.title}), mise à jour : 2026
             </p>
           </article>
         </section>
