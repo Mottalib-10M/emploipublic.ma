@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { CVData, generateCVClassique, generateCVModerne, generateCVProfessionnel } from '@/lib/cv-engine';
+import ShareButtons from '@/components/ui/ShareButtons';
 
 interface CVPreviewProps {
   cvData: CVData;
@@ -45,6 +46,15 @@ export default function CVPreview({ cvData }: CVPreviewProps) {
         >
           Imprimer
         </button>
+      </div>
+
+      {/* Share section */}
+      <div className="border-b border-gray-200 px-4 py-3">
+        <p className="text-xs text-gray-500 mb-2">Partager ce modèle avec un ami :</p>
+        <ShareButtons
+          text={`Générateur de CV gratuit pour la fonction publique au Maroc - modèle ${template.label} :`}
+          url="https://emploipublic.ma/generateur-cv/"
+        />
       </div>
 
       {/* Preview */}
