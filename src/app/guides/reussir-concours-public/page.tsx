@@ -33,7 +33,7 @@ export default function GuideReussirConcours() {
           <nav className="text-sm text-primary-200 mb-4">
             <Link href="/" className="hover:text-white">Accueil</Link>
             <span className="mx-2">/</span>
-            <span className="text-white">Guide</span>
+            <Link href="/guides/" className="hover:text-white">Guides</Link>
           </nav>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-3">
             Comment Réussir un Concours de la Fonction Publique au Maroc

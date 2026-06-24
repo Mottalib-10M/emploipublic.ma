@@ -120,6 +120,35 @@ export default function SalairesPage() {
             ))}
           </div>
         </section>
+
+        {/* Related: Echelle detail pages */}
+        <section className="mt-16">
+          <h2 className="section-title">Détail par échelle</h2>
+          <p className="section-subtitle">Consultez la grille complète de chaque échelle de la fonction publique</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((n) => (
+              <Link key={n} href={`/salaires-fonction-publique/echelle/${n}/`} className="card p-3 text-sm text-center hover:shadow-md transition-shadow text-primary-600 hover:text-primary-700 font-medium">
+                Échelle {n}
+              </Link>
+            ))}
+            <Link href="/salaires-fonction-publique/echelle/he/" className="card p-3 text-sm text-center hover:shadow-md transition-shadow text-primary-600 hover:text-primary-700 font-medium">
+              Hors Échelle
+            </Link>
+          </div>
+        </section>
+
+        {/* Related resources */}
+        <section className="mt-12 p-6 bg-primary-50 rounded-xl">
+          <h3 className="font-bold text-gray-900 mb-4">Pages liées</h3>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/concours/" className="btn-secondary text-sm">Concours ouverts</Link>
+            <Link href="/guides/salaires-fonction-publique-maroc/" className="btn-secondary text-sm">Guide des salaires</Link>
+            <Link href="/guides/fonction-publique-contractuelle/" className="btn-secondary text-sm">Contractuels</Link>
+            <Link href="/ministeres/" className="btn-secondary text-sm">Les ministères</Link>
+            <Link href="/generateur-cv/" className="btn-primary text-sm">Créer mon CV</Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

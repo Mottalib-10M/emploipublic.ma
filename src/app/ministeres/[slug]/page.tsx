@@ -160,6 +160,19 @@ export default async function MinisterePage({ params }: Props) {
           </div>
         </div>
 
+
+        {/* Related resources */}
+        <section className="mt-8 p-6 bg-primary-50 rounded-xl">
+          <h3 className="font-bold text-gray-900 mb-4">Ressources utiles</h3>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/concours/" className="btn-secondary text-sm">Tous les concours</Link>
+            <Link href="/salaires-fonction-publique/" className="btn-secondary text-sm">Grille des salaires</Link>
+            <Link href="/guides/reussir-concours-public/" className="btn-secondary text-sm">Guide concours</Link>
+            <Link href="/guides/dossier-candidature-concours/" className="btn-secondary text-sm">Dossier candidature</Link>
+            <Link href="/generateur-cv/" className="btn-primary text-sm">Créer mon CV</Link>
+          </div>
+        </section>
+
         <p className="text-sm text-gray-500 mt-12 italic">
           Par {siteConfig.author.name} ({siteConfig.author.title})
         </p>

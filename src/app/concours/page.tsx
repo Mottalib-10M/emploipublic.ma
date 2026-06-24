@@ -134,6 +134,41 @@ export default function ConcoursPage() {
             ))}
           </div>
         </section>
+
+        {/* Related: Concours by profession */}
+        <section className="mt-16">
+          <h2 className="section-title">Concours par métier</h2>
+          <p className="section-subtitle">Explorez les concours par profession pour trouver celui qui correspond à votre profil</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
+            {[
+              { label: 'Professeur', href: '/concours/professeur/' },
+              { label: 'Ingénieur', href: '/concours/ingenieur/' },
+              { label: 'Administrateur', href: '/concours/administrateur/' },
+              { label: 'Médecin', href: '/concours/medecin/' },
+              { label: 'Infirmier', href: '/concours/infirmier/' },
+              { label: 'Technicien', href: '/concours/technicien/' },
+              { label: 'Inspecteur', href: '/concours/inspecteur/' },
+              { label: 'Informaticien', href: '/concours/informaticien/' },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} className="card p-3 text-sm text-center hover:shadow-md transition-shadow text-primary-600 hover:text-primary-700 font-medium">
+                Concours {item.label}
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Related resources */}
+        <section className="mt-12 p-6 bg-primary-50 rounded-xl">
+          <h3 className="font-bold text-gray-900 mb-4">Ressources pour préparer votre concours</h3>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/guides/" className="btn-secondary text-sm">Tous les guides</Link>
+            <Link href="/guides/epreuve-ecrite-concours/" className="btn-secondary text-sm">Épreuve écrite</Link>
+            <Link href="/guides/qcm-droit-administratif/" className="btn-secondary text-sm">QCM Droit admin.</Link>
+            <Link href="/salaires-fonction-publique/" className="btn-secondary text-sm">Grille des salaires</Link>
+            <Link href="/generateur-cv/" className="btn-primary text-sm">Créer mon CV</Link>
+          </div>
+        </section>
+
       </div>
     </>
   );

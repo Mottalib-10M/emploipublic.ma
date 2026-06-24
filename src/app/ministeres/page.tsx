@@ -65,6 +65,18 @@ export default function MinisteresPage() {
             </p>
           </article>
         </section>
+
+        {/* Related resources */}
+        <section className="mt-12 p-6 bg-primary-50 rounded-xl">
+          <h3 className="font-bold text-gray-900 mb-4">Pages liées</h3>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/concours/" className="btn-secondary text-sm">Concours ouverts</Link>
+            <Link href="/salaires-fonction-publique/" className="btn-secondary text-sm">Grille des salaires</Link>
+            <Link href="/guides/" className="btn-secondary text-sm">Tous les guides</Link>
+            <Link href="/guides/dossier-candidature-concours/" className="btn-secondary text-sm">Dossier candidature</Link>
+            <Link href="/generateur-cv/" className="btn-primary text-sm">Créer mon CV</Link>
+          </div>
+        </section>
       </div>
     </>
   );

@@ -23,7 +23,7 @@ export const siteConfig = {
     { label: 'Concours', href: '/concours/' },
     { label: 'Ministères', href: '/ministeres/' },
     { label: 'Générateur CV', href: '/generateur-cv/' },
-    { label: 'Guides', href: '/guides/reussir-concours-public/' },
+    { label: 'Guides', href: '/guides/' },
     { label: 'Salaires', href: '/salaires-fonction-publique/' },
   ],
 } as const;
