@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ministere = getMinistereBySlug(slug);
   if (!ministere) return {};
   return {
-    title: `${ministere.nomCourt} : Concours et Emploi Public au Maroc`,
-    description: `Concours et emploi au ${ministere.nomCourt}. ${ministere.effectif}, départements, types de concours et échelles salariales.`,
+    title: `Emploi ${ministere.nomCourt} : concours fonction publique Maroc 2026`,
+    description: `Concours et emploi public au ${ministere.nomCourt} au Maroc en 2026 : postes ouverts, conditions d'accès, échelles salariales, calendrier des épreuves et préparations.`,
     alternates: { canonical: `/ministeres/${slug}/` },
   };
 }

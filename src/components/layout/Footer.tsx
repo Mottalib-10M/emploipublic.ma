@@ -5,6 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <nav aria-label="Navigation de pied de page">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -35,6 +36,8 @@ export default function Footer() {
               <li><Link href="/guides/preparer-entretien-oral/" className="hover:text-primary-400 transition-colors">Préparer l&apos;entretien oral</Link></li>
               <li><Link href="/guides/lettre-motivation-fonction-publique/" className="hover:text-primary-400 transition-colors">Lettre de motivation</Link></li>
               <li><Link href="/guides/salaires-fonction-publique-maroc/" className="hover:text-primary-400 transition-colors">Guide des salaires</Link></li>
+              <li><Link href="/glossaire/" className="hover:text-primary-400 transition-colors">Glossaire</Link></li>
+              <li><Link href="/actualites/" className="hover:text-primary-400 transition-colors">Actualités</Link></li>
             </ul>
           </div>
 
@@ -47,10 +50,14 @@ export default function Footer() {
                 </a>
               </li>
               <li><Link href="/a-propos/" className="hover:text-primary-400 transition-colors">À propos</Link></li>
+              <li><Link href="/methodologie/" className="hover:text-primary-400 transition-colors">Méthodologie</Link></li>
+              <li><Link href="/contact/" className="hover:text-primary-400 transition-colors">Contact</Link></li>
+              <li><Link href="/confidentialite/" className="hover:text-primary-400 transition-colors">Confidentialité</Link></li>
               <li><Link href="/mentions-legales/" className="hover:text-primary-400 transition-colors">Mentions légales</Link></li>
             </ul>
           </div>
         </div>
+        </nav>
 
         <div className="border-t border-gray-800 mt-10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">

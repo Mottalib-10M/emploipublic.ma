@@ -34,6 +34,18 @@ const faqs = [
   },
 ];
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mottalib Radif",
+  "jobTitle": "Personal Finance Expert",
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "INSEAD"
+  },
+  "url": "https://emploipublic.ma/a-propos/"
+};
+
 export default function HomePage() {
   const faqSchema = buildFAQSchema(faqs);
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -52,6 +64,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
 
       {/* Hero Section */}

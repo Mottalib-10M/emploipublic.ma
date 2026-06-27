@@ -5,7 +5,7 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema } from '@/lib
 
 export const metadata: Metadata = {
   title: 'QCM Droit Administratif Concours Fonction Publique Maroc',
-  description: 'Préparez le QCM de droit administratif du concours de la fonction publique au Maroc : thèmes clés, méthode de révision et conseils pour réussir.',
+  description: 'Préparez le QCM de droit administratif du concours de la fonction publique au Maroc : thèmes clés, méthode de révision, questions types et conseils pratiques.',
   alternates: { canonical: '/guides/qcm-droit-administratif/' },
 };
 

@@ -5,7 +5,7 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema } from '@/lib
 
 export const metadata: Metadata = {
   title: 'Dossier Candidature Concours Fonction Publique Maroc 2026',
-  description: 'Guide complet du dossier de candidature pour les concours de la fonction publique au Maroc : pièces requises, modèle de demande et erreurs à éviter.',
+  description: 'Guide complet du dossier de candidature pour les concours de la fonction publique au Maroc : pièces requises, modèle de demande, délais et erreurs à éviter.',
   alternates: { canonical: '/guides/dossier-candidature-concours/' },
 };
 
