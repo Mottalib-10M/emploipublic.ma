@@ -4,31 +4,31 @@ import { siteConfig } from '@/lib/config';
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Concours Fonction Publique 2025 : Calendrier, Salaires et Nouveaux Postes',
-  description: 'Calendrier complet des concours de la fonction publique au Maroc en 2025, reforme de la grille des salaires, creation de nouveaux postes et digitalisation du recrutement.',
+  title: 'Concours Fonction Publique 2026 : Calendrier, Salaires et Nouveaux Postes',
+  description: 'Calendrier complet des concours de la fonction publique au Maroc en 2026, reforme de la grille des salaires, creation de nouveaux postes et digitalisation du recrutement.',
   alternates: { canonical: '/actualites/concours-fonction-publique-2025/' },
 };
 
 const faqData = [
-  { question: 'Combien de postes sont ouverts dans la fonction publique en 2025 ?', answer: 'La loi de finances 2025 prevoit la creation de 29 840 postes budgetaires dans la fonction publique marocaine, en hausse de 12% par rapport a 2024. Les secteurs prioritaires sont l\'education nationale (9 000 postes), la sante (5 500 postes), l\'interieur (4 200 postes) et la justice (2 800 postes).' },
-  { question: 'Quand ont lieu les concours de la fonction publique en 2025 ?', answer: 'Les concours se deroulent principalement en deux vagues : la premiere entre mars et juin 2025, et la seconde entre septembre et decembre 2025. Chaque ministere publie son calendrier specifique. Les inscriptions ouvrent generalement 30 a 45 jours avant la date du concours.' },
-  { question: 'Quelle est la nouvelle grille des salaires de la fonction publique en 2025 ?', answer: 'La reforme 2025 prevoit une revalorisation de 1 000 DH/mois pour les echelles 7 a 9 et de 1 500 DH/mois pour les echelles 10 et 11. Le salaire net minimum d\'un fonctionnaire echelle 7 passe a environ 5 200 DH/mois. Les indemnites de logement et de transport ont egalement ete revalorisees.' },
-  { question: 'Comment s\'inscrire a un concours de la fonction publique en 2025 ?', answer: 'L\'inscription se fait desormais majoritairement en ligne via le portail emploi-public.ma ou les sites web des ministeres. Le dossier comprend : demande manuscrite, CV, copies des diplomes, copie CIN, photos d\'identite et attestation d\'equivalence pour les diplomes etrangers.' },
-  { question: 'Quels sont les concours les plus demandes en 2025 ?', answer: 'Les concours les plus demandes sont : enseignant du secondaire (education nationale), medecin de sante publique, ingenieur d\'Etat, administrateur au ministere de l\'Interieur et cadre financier au ministere des Finances. Le ratio candidats/postes varie de 15:1 pour les postes techniques a 50:1 pour les postes administratifs generaux.' },
+  { question: 'Combien de postes sont ouverts dans la fonction publique en 2026 ?', answer: 'La loi de finances 2026 prevoit la creation de 29 840 postes budgetaires dans la fonction publique marocaine, en hausse de 12% par rapport a 2025. Les secteurs prioritaires sont l\'education nationale (9 000 postes), la sante (5 500 postes), l\'interieur (4 200 postes) et la justice (2 800 postes).' },
+  { question: 'Quand ont lieu les concours de la fonction publique en 2026 ?', answer: 'Les concours se deroulent principalement en deux vagues : la premiere entre mars et juin 2026, et la seconde entre septembre et decembre 2026. Chaque ministere publie son calendrier specifique. Les inscriptions ouvrent generalement 30 a 45 jours avant la date du concours.' },
+  { question: 'Quelle est la nouvelle grille des salaires de la fonction publique en 2026 ?', answer: 'La reforme 2026 prevoit une revalorisation de 1 000 DH/mois pour les echelles 7 a 9 et de 1 500 DH/mois pour les echelles 10 et 11. Le salaire net minimum d\'un fonctionnaire echelle 7 passe a environ 5 200 DH/mois. Les indemnites de logement et de transport ont egalement ete revalorisees.' },
+  { question: 'Comment s\'inscrire a un concours de la fonction publique en 2026 ?', answer: 'L\'inscription se fait desormais majoritairement en ligne via le portail emploi-public.ma ou les sites web des ministeres. Le dossier comprend : demande manuscrite, CV, copies des diplomes, copie CIN, photos d\'identite et attestation d\'equivalence pour les diplomes etrangers.' },
+  { question: 'Quels sont les concours les plus demandes en 2026 ?', answer: 'Les concours les plus demandes sont : enseignant du secondaire (education nationale), medecin de sante publique, ingenieur d\'Etat, administrateur au ministere de l\'Interieur et cadre financier au ministere des Finances. Le ratio candidats/postes varie de 15:1 pour les postes techniques a 50:1 pour les postes administratifs generaux.' },
 ];
 
 export default function ConcoursFonctionPublique2025Page() {
   const articleSchema = buildArticleSchema({
-    title: 'Concours de la fonction publique 2025 : calendrier, reforme des salaires et nouveaux postes',
-    description: 'Calendrier complet des concours 2025, reforme salariale et nouveaux postes dans la fonction publique marocaine.',
+    title: 'Concours de la fonction publique 2026 : calendrier, reforme des salaires et nouveaux postes',
+    description: 'Calendrier complet des concours 2026, reforme salariale et nouveaux postes dans la fonction publique marocaine.',
     url: `${siteConfig.url}/actualites/concours-fonction-publique-2025/`,
     datePublished: '2025-06-25',
-    dateModified: '2025-06-25',
+    dateModified: '2026-07-01',
   });
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Accueil', url: siteConfig.url },
     { name: 'Actualites', url: `${siteConfig.url}/actualites/` },
-    { name: 'Concours fonction publique 2025', url: `${siteConfig.url}/actualites/concours-fonction-publique-2025/` },
+    { name: 'Concours fonction publique 2026', url: `${siteConfig.url}/actualites/concours-fonction-publique-2025/` },
   ]);
   const faqSchema = buildFAQSchema(faqData);
 
@@ -46,20 +46,20 @@ export default function ConcoursFonctionPublique2025Page() {
             <Link href="/actualites/" className="hover:text-white">Actualites</Link>
           </nav>
           <h1 className="text-3xl md:text-4xl font-extrabold mb-3">
-            Concours de la Fonction Publique 2025 : Calendrier, Reforme des Salaires et Nouveaux Postes
+            Concours de la Fonction Publique 2026 : Calendrier, Reforme des Salaires et Nouveaux Postes
           </h1>
-          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}), juin 2025</p>
+          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}), juillet 2026</p>
         </div>
       </section>
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 prose prose-gray max-w-none">
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          L&apos;annee 2025 s&apos;annonce exceptionnelle pour les candidats a la fonction publique marocaine. Avec pres de 30 000 postes budgetaires crees, une reforme salariale attendue depuis des annees et la digitalisation croissante des processus de recrutement, le paysage de l&apos;emploi public se transforme en profondeur. Voici tout ce qu&apos;il faut savoir pour saisir les opportunites.
+          L&apos;annee 2026 s&apos;annonce exceptionnelle pour les candidats a la fonction publique marocaine. Avec pres de 30 000 postes budgetaires crees, une reforme salariale attendue depuis des annees et la digitalisation croissante des processus de recrutement, le paysage de l&apos;emploi public se transforme en profondeur. Voici tout ce qu&apos;il faut savoir pour saisir les opportunites.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Calendrier des concours 2025 : 29 840 postes a pourvoir</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Calendrier des concours 2026 : 29 840 postes a pourvoir</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          La loi de finances 2025 prevoit la creation de 29 840 postes budgetaires, en hausse de 12% par rapport aux 26 600 postes de 2024. Cette augmentation traduit la volonte du gouvernement de renforcer les services publics dans les secteurs prioritaires et de repondre aux besoins croissants de la population.
+          La loi de finances 2026 prevoit la creation de 29 840 postes budgetaires, en hausse de 12% par rapport aux 26 600 postes de 2025. Cette augmentation traduit la volonte du gouvernement de renforcer les services publics dans les secteurs prioritaires et de repondre aux besoins croissants de la population.
         </p>
 
         <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">Repartition par secteur</h3>
@@ -79,11 +79,11 @@ export default function ConcoursFonctionPublique2025Page() {
 
         <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">Calendrier previsionnel</h3>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Les concours de 2025 se deroulent en deux grandes vagues :
+          Les concours de 2026 se deroulent en deux grandes vagues :
         </p>
         <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-2">
-          <li><strong>Premiere vague (mars - juin 2025) :</strong> concours de l&apos;education nationale, de la sante, de la justice et de l&apos;interieur. Les inscriptions ont debute en fevrier pour la plupart.</li>
-          <li><strong>Deuxieme vague (septembre - decembre 2025) :</strong> concours des finances, de l&apos;agriculture, de l&apos;equipement et des autres ministeres. Les avis seront publies a partir de juillet 2025.</li>
+          <li><strong>Premiere vague (mars - juin 2026) :</strong> concours de l&apos;education nationale, de la sante, de la justice et de l&apos;interieur. Les inscriptions ont debute en fevrier pour la plupart.</li>
+          <li><strong>Deuxieme vague (septembre - decembre 2026) :</strong> concours des finances, de l&apos;agriculture, de l&apos;equipement et des autres ministeres. Les avis seront publies a partir de juillet 2026.</li>
         </ul>
         <p className="text-gray-700 leading-relaxed mb-4">
           <strong>Conseil :</strong> consultez regulierement notre page <Link href="/concours/" className="text-primary-600 hover:text-primary-700">concours ouverts</Link> pour ne manquer aucun avis de concours. Vous y trouverez les dates, les conditions d&apos;acces et les liens d&apos;inscription pour chaque concours.
@@ -91,12 +91,12 @@ export default function ConcoursFonctionPublique2025Page() {
 
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">2. Reforme de la grille des salaires : des augmentations significatives</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Le dialogue social entre le gouvernement et les syndicats a abouti a un accord historique sur la revalorisation des salaires de la fonction publique. Cette reforme, mise en oeuvre progressivement a partir de janvier 2025, concerne l&apos;ensemble des echelles et marque l&apos;augmentation la plus importante depuis 2011.
+          Le dialogue social entre le gouvernement et les syndicats a abouti a un accord historique sur la revalorisation des salaires de la fonction publique. Cette reforme, mise en oeuvre progressivement a partir de janvier 2026, concerne l&apos;ensemble des echelles et marque l&apos;augmentation la plus importante depuis 2011.
         </p>
 
         <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">Augmentations par echelle</h3>
         <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-2">
-          <li><strong>Echelles 7 a 9 :</strong> augmentation de 1 000 DH/mois brut, repartie en deux tranches (500 DH en janvier 2025, 500 DH en juillet 2025)</li>
+          <li><strong>Echelles 7 a 9 :</strong> augmentation de 1 000 DH/mois brut, repartie en deux tranches (500 DH en janvier 2026, 500 DH en juillet 2026)</li>
           <li><strong>Echelles 10 et 11 :</strong> augmentation de 1 500 DH/mois brut, en deux tranches de 750 DH</li>
           <li><strong>Echelles hors echelle :</strong> augmentation forfaitaire de 2 000 DH/mois</li>
         </ul>
@@ -125,12 +125,12 @@ export default function ConcoursFonctionPublique2025Page() {
 
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">3. Digitalisation du recrutement : vers des concours modernises</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Le gouvernement a lance un vaste chantier de modernisation des processus de recrutement dans la fonction publique. Plusieurs innovations sont deployees en 2025 pour rendre les concours plus transparents, plus accessibles et plus efficaces.
+          Le gouvernement a lance un vaste chantier de modernisation des processus de recrutement dans la fonction publique. Plusieurs innovations sont deployees en 2026 pour rendre les concours plus transparents, plus accessibles et plus efficaces.
         </p>
 
         <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">Inscription en ligne generalisee</h3>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Depuis janvier 2025, l&apos;inscription aux concours de la fonction publique est entierement dematerialisee pour la majorite des ministeres. Le portail emploi-public.ma centralise les inscriptions et permet aux candidats de :
+          Depuis janvier 2026, l&apos;inscription aux concours de la fonction publique est entierement dematerialisee pour la majorite des ministeres. Le portail emploi-public.ma centralise les inscriptions et permet aux candidats de :
         </p>
         <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-2">
           <li>Creer un compte unique pour toutes les candidatures</li>
@@ -142,7 +142,7 @@ export default function ConcoursFonctionPublique2025Page() {
 
         <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">Epreuves numeriques</h3>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Certains ministeres experimentent les epreuves sur tablette pour les QCM, ce qui permet une correction automatisee et une publication plus rapide des resultats. Le ministere des Finances et le ministere de l&apos;Industrie sont les premiers a adopter ce format pour leurs concours 2025.
+          Certains ministeres experimentent les epreuves sur tablette pour les QCM, ce qui permet une correction automatisee et une publication plus rapide des resultats. Le ministere des Finances et le ministere de l&apos;Industrie sont les premiers a adopter ce format pour leurs concours 2026.
         </p>
 
         <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">Publication transparente des resultats</h3>
@@ -152,7 +152,7 @@ export default function ConcoursFonctionPublique2025Page() {
 
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">4. Nouveaux profils recherches : les metiers d&apos;avenir</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          La fonction publique marocaine diversifie ses recrutements pour repondre aux enjeux de la transformation numerique et du developpement durable. En 2025, de nouveaux profils sont particulierement recherches :
+          La fonction publique marocaine diversifie ses recrutements pour repondre aux enjeux de la transformation numerique et du developpement durable. En 2026, de nouveaux profils sont particulierement recherches :
         </p>
         <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-2">
           <li><strong>Ingenieurs en informatique et cybersecurite :</strong> pour accompagner la digitalisation des services publics et securiser les systemes d&apos;information</li>
@@ -163,7 +163,7 @@ export default function ConcoursFonctionPublique2025Page() {
           <li><strong>Medecins specialistes :</strong> particulierement en zones rurales et dans les specialites deficitaires</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">5. Conseils pour les candidats en 2025</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">5. Conseils pour les candidats en 2026</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
           Face a l&apos;augmentation du nombre de postes et a la modernisation des concours, voici nos recommandations pour maximiser vos chances :
         </p>
@@ -175,9 +175,9 @@ export default function ConcoursFonctionPublique2025Page() {
           <li><strong>Restez informe :</strong> suivez les annonces sur notre page <Link href="/concours/" className="text-primary-600 hover:text-primary-700">concours ouverts</Link> et inscrivez-vous des l&apos;ouverture des inscriptions.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">6. Perspectives pour 2026</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">6. Perspectives pour 2027</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Le gouvernement a annonce plusieurs mesures prevues pour 2026 :
+          Le gouvernement a annonce plusieurs mesures prevues pour 2027 :
         </p>
         <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-2">
           <li>Poursuite de la reforme salariale avec une deuxieme tranche d&apos;augmentation</li>
@@ -189,7 +189,7 @@ export default function ConcoursFonctionPublique2025Page() {
 
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Conclusion</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          L&apos;annee 2025 represente une opportunite historique pour integrer la fonction publique marocaine. Avec pres de 30 000 postes crees, des salaires en hausse significative et des processus de recrutement modernises, le secteur public redevient attractif pour les diplomes marocains. Preparez-vous des maintenant pour saisir ces opportunites et construire une carriere stable et valorisante au service de l&apos;interet general.
+          L&apos;annee 2026 represente une opportunite historique pour integrer la fonction publique marocaine. Avec pres de 30 000 postes crees, des salaires en hausse significative et des processus de recrutement modernises, le secteur public redevient attractif pour les diplomes marocains. Preparez-vous des maintenant pour saisir ces opportunites et construire une carriere stable et valorisante au service de l&apos;interet general.
         </p>
 
         {/* FAQ */}
@@ -221,15 +221,15 @@ export default function ConcoursFonctionPublique2025Page() {
         <div className="mt-10 border-t border-gray-200 pt-6 not-prose">
           <h2 className="text-sm font-bold text-gray-900 mb-3">Sources</h2>
           <ul className="text-xs text-gray-500 space-y-1">
-            <li>Loi de finances 2025 - Postes budgetaires crees (<a href="https://www.finances.gov.ma" className="underline hover:text-primary-600" rel="noopener noreferrer" target="_blank">finances.gov.ma</a>)</li>
+            <li>Loi de finances 2026 - Postes budgetaires crees (<a href="https://www.finances.gov.ma" className="underline hover:text-primary-600" rel="noopener noreferrer" target="_blank">finances.gov.ma</a>)</li>
             <li>Ministere de la Transition Numerique et de la Reforme de l&apos;Administration - Circulaire sur la digitalisation des concours</li>
-            <li>Accord du dialogue social 2024-2025 - Revalorisation salariale de la fonction publique</li>
+            <li>Accord du dialogue social 2025-2026 - Revalorisation salariale de la fonction publique</li>
             <li>Haut-Commissariat au Plan - Statistiques de l&apos;emploi public</li>
           </ul>
         </div>
 
         <p className="text-sm text-gray-500 mt-8 italic">
-          Par {siteConfig.author.name} ({siteConfig.author.title}), publie le 25 juin 2025
+          Par {siteConfig.author.name} ({siteConfig.author.title}), mis a jour le 1 juillet 2026
         </p>
       </article>
     </>

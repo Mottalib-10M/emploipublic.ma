@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  verification: {
-    google: 'GOOGLE_VERIFICATION_CODE',
-    other: { 'msvalidate.01': 'BING_VERIFICATION_CODE' },
-  },
+  // verification: {
+  //   google: 'GOOGLE_VERIFICATION_CODE',
+  //   other: { 'msvalidate.01': 'BING_VERIFICATION_CODE' },
+  // },
 };
 
 export default function RootLayout({

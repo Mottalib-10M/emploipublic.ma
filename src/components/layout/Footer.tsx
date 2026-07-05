@@ -59,7 +59,17 @@ export default function Footer() {
         </div>
         </nav>
 
-        <div className="border-t border-gray-800 mt-10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="border-t border-gray-800 mt-10 pt-8">
+          <h3 className="font-semibold text-white mb-4">Sites utiles</h3>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <li><a href="https://salairemaroc.ma" target="_blank" rel="noopener" className="hover:text-primary-400 transition-colors">Calculateur Salaire Net Maroc</a></li>
+            <li><a href="https://cnssmaroc.ma" target="_blank" rel="noopener" className="hover:text-primary-400 transition-colors">Simulateur CNSS Maroc</a></li>
+            <li><a href="https://autoentrepreneurmaroc.ma" target="_blank" rel="noopener" className="hover:text-primary-400 transition-colors">Guide Auto-Entrepreneur Maroc</a></li>
+            <li><a href="https://banquesmaroc.ma" target="_blank" rel="noopener" className="hover:text-primary-400 transition-colors">Comparateur Banques Maroc</a></li>
+          </ul>
+        </div>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">
             &copy; {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés.
           </p>

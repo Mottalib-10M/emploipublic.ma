@@ -4,15 +4,15 @@ import { siteConfig } from '@/lib/config';
 import { buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Actualites Fonction Publique Maroc 2025 : Concours, Salaires et Reformes',
-  description: 'Suivez l\'actualite de la fonction publique au Maroc : calendrier des concours 2025, reforme de la grille des salaires, nouveaux postes et recrutements en cours.',
+  title: 'Actualites Fonction Publique Maroc 2026 : Concours, Salaires et Reformes',
+  description: 'Suivez l\'actualite de la fonction publique au Maroc : calendrier des concours 2026, reforme de la grille des salaires, nouveaux postes et recrutements en cours.',
   alternates: { canonical: '/actualites/' },
 };
 
 const articles = [
   {
-    title: 'Concours de la fonction publique 2025 : calendrier, reforme des salaires et nouveaux postes',
-    description: 'Calendrier complet des concours 2025, reforme de la grille salariale, creation de nouveaux postes et digitalisation du recrutement dans la fonction publique marocaine.',
+    title: 'Concours de la fonction publique 2026 : calendrier, reforme des salaires et nouveaux postes',
+    description: 'Calendrier complet des concours 2026, reforme de la grille salariale, creation de nouveaux postes et digitalisation du recrutement dans la fonction publique marocaine.',
     href: '/actualites/concours-fonction-publique-2025/',
     category: 'Concours',
     date: '25 juin 2025',
@@ -88,7 +88,7 @@ export default function ActualitesHubPage() {
               Consultez egalement nos <Link href="/guides/" className="text-primary-600 hover:text-primary-700">guides pratiques</Link> pour preparer vos concours, notre <Link href="/generateur-cv/" className="text-primary-600 hover:text-primary-700">generateur de CV gratuit</Link> pour constituer votre dossier, et la <Link href="/salaires-fonction-publique/" className="text-primary-600 hover:text-primary-700">grille des salaires</Link> pour estimer votre remuneration.
             </p>
             <p className="text-sm text-gray-500 mt-8 italic">
-              Par {siteConfig.author.name} ({siteConfig.author.title}), mise a jour : 2025
+              Par {siteConfig.author.name} ({siteConfig.author.title}), mise a jour : 2026
             </p>
           </article>
         </section>
