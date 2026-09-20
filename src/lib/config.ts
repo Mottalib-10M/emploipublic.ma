@@ -5,8 +5,8 @@ export const siteConfig = {
   tagline: 'Concours, offres d\'emploi et outils pour la fonction publique au Maroc',
   description: 'Emploi Public au Maroc : concours de la fonction publique, offres d\'emploi, grille de salaires, et générateur de CV gratuit. Tout pour réussir votre carrière dans la fonction publique marocaine.',
   author: {
-    name: 'Mottalib Radif',
-    title: 'MBA INSEAD',
+    name: 'Radif Partners',
+    title: 'Éditeur de calculateurs et de guides pratiques',
     email: 'contact@emploipublic.ma',
   },
   contact: 'contact@emploipublic.ma',

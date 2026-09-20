@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
-  authors: [{ name: 'Mottalib Radif' }],
+  authors: [{ name: 'Radif Partners' }],
   alternates: {
     canonical: '/',
   },

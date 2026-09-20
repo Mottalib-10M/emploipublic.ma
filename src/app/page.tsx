@@ -36,13 +36,9 @@ const faqs = [
 
 const personSchema = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Mottalib Radif",
+  "@type": "Organization",
+  "name": "Radif Partners",
   "jobTitle": "Personal Finance Expert",
-  "alumniOf": {
-    "@type": "EducationalOrganization",
-    "name": "INSEAD"
-  },
   "url": "https://emploipublic.ma/a-propos/"
 };
 

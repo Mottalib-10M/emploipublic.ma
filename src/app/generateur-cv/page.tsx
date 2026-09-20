@@ -110,7 +110,7 @@ export default function GenerateurCVPage() {
               Un bon CV pour la fonction publique doit être concis (une à deux pages maximum), chronologique (du plus récent au plus ancien) et vérifiable. Mentionnez toujours les dates exactes de vos diplômes et expériences, les noms complets des établissements et entreprises, et les intitulés précis de vos postes. Si vous parlez plusieurs langues, précisez votre niveau (courant, professionnel, notions) pour chacune, en particulier l&apos;arabe, le français et l&apos;anglais, langues couramment utilisées dans l&apos;administration marocaine.
             </p>
             <p className="text-sm text-gray-500 mt-6 italic">
-              Outil développé par Mottalib Radif (MBA INSEAD)
+              Outil développé par Radif Partners (Éditeur de calculateurs et de guides pratiques)
             </p>
           </article>
         </section>
