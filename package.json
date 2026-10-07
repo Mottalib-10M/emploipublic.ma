@@ -6,6 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "check:cookies": "python3 scripts/check-cookies.py .",
     "lint": "next lint",
     "postbuild": "next-sitemap"
   },

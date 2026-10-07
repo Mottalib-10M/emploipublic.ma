@@ -54,7 +54,7 @@ export default function MentionsLegalesPage() {
             Le générateur de CV fonctionne entièrement côté client (dans votre navigateur). Aucune donnée personnelle saisie dans le générateur de CV n&apos;est transmise à nos serveurs. Les données sont stockées localement dans le localStorage de votre navigateur et ne sont accessibles que par vous.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Le site peut utiliser des cookies techniques nécessaires au bon fonctionnement du site. Aucun cookie de pistage ou publicitaire n&apos;est utilisé.
+            Aucun cookie n&apos;est déposé par le site et aucun outil de mesure d&apos;audience n&apos;y est chargé.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Limitation de responsabilité</h2>

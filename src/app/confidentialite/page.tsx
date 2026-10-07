@@ -5,7 +5,7 @@ import { buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Politique de Confidentialité - Emploi Public Maroc',
-  description: 'Politique de confidentialité d\'emploipublic.ma : zéro collecte de données personnelles, générateur de CV 100% côté navigateur, zéro cookie de pistage.',
+  description: 'Confidentialité d\'emploipublic.ma : aucun cookie, aucun traceur, rien d\'enregistré par l\'éditeur ; le CV que vous rédigez reste dans votre navigateur.',
   alternates: { canonical: '/confidentialite/' },
   robots: { index: false, follow: true },
 };
@@ -62,13 +62,13 @@ export default function ConfidentialitePage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Cookies</h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Emploi Public Maroc n&apos;utilise aucun cookie de suivi publicitaire ou de pistage commercial. Le site peut utiliser des cookies techniques strictement nécessaires au bon fonctionnement du site. Ces cookies ne contiennent aucune information personnelle identifiable.
+            Emploi Public Maroc ne dépose aucun cookie : ni pour la recherche de concours, ni pour la grille des salaires, ni pour le générateur de CV. Sans cookie, pas de bandeau à valider. Le brouillon de CV gardé dans le localStorage décrit plus haut n&apos;est pas un cookie : il ne part jamais vers un serveur.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Outils d&apos;analyse</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Mesure d&apos;audience</h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Le site peut utiliser des outils d&apos;analyse d&apos;audience anonymes pour comprendre l&apos;utilisation du site et améliorer l&apos;expérience utilisateur. Ces outils collectent des données agrégées et anonymisées (pages visitées, durée de visite, type d&apos;appareil) sans permettre l&apos;identification d&apos;un utilisateur individuel.
+            Aucun outil de mesure d&apos;audience ni traceur n&apos;est chargé sur emploipublic.ma : pas de statistiques de fréquentation, pas d&apos;enregistrement des visites, pas de pixel publicitaire. Il ne reste que les journaux techniques tenus par l&apos;hébergeur pour la sécurité du service, et le courriel que vous nous adressez si vous nous écrivez.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Liens externes</h2>
@@ -80,7 +80,7 @@ export default function ConfidentialitePage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Droits des utilisateurs</h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Puisque nous ne collectons aucune donnée personnelle sur nos serveurs, il n&apos;y a aucune donnée à consulter, modifier ou supprimer de notre côté. Pour les données stockées localement dans votre navigateur (localStorage du générateur de CV), vous pouvez les supprimer à tout moment via les paramètres de votre navigateur.
+            Puisque nous ne collectons aucune donnée personnelle sur nos serveurs, il n&apos;y a aucune donnée à consulter, modifier ou supprimer de notre côté. Pour les données stockées localement dans votre navigateur (localStorage du générateur de CV), vous pouvez les supprimer à tout moment via les paramètres de votre navigateur. Vous pouvez aussi saisir la Commission nationale de contrôle de la protection des données à caractère personnel (CNDP, loi n° 09-08, www.cndp.ma).
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Modifications de cette politique</h2>
@@ -95,7 +95,7 @@ export default function ConfidentialitePage() {
             Pour toute question relative à cette politique de confidentialité, vous pouvez nous écrire à : <a href={`mailto:${siteConfig.contact}`} className="text-primary-600">{siteConfig.contact}</a>.
           </p>
 
-          <p className="text-sm text-gray-500 mt-8 italic">Dernière mise à jour : juin 2026</p>
+          <p className="text-sm text-gray-500 mt-8 italic">Dernière mise à jour : octobre 2026</p>
         </article>
       </div>
     </>
