@@ -20,7 +20,7 @@ export default function ConfidentialitePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white py-12">
+      <section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white pt-8 pb-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl md:text-4xl font-extrabold mb-3">Politique de confidentialité</h1>
         </div>

@@ -68,7 +68,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 md:pt-16 md:pb-24">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
               Emploi Public au Maroc : Concours, Offres et Outils

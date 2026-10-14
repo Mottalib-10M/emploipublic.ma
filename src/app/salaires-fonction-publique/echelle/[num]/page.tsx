@@ -132,7 +132,7 @@ export default async function EchellePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white py-12">
+      <section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white pt-8 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Fil d'Ariane" className="text-sm text-primary-200 mb-4">
             <Link href="/" className="hover:text-white">Accueil</Link>

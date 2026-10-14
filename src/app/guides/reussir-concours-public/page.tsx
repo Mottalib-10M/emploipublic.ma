@@ -28,7 +28,7 @@ export default function GuideReussirConcours() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white py-12">
+      <section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white pt-8 pb-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-primary-200 mb-4">
             <Link href="/" className="hover:text-white">Accueil</Link>
