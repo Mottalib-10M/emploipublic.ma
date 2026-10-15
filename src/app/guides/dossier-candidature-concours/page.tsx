@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
+import { dateLongue } from '@/lib/date';
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -65,7 +66,7 @@ export default function GuideDossierCandidature() {
           <h1 className="text-3xl md:text-4xl font-extrabold mb-3">
             Constituer son Dossier de Candidature pour le Concours
           </h1>
-          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}), 2026</p>
+          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}), 2026 · Mis à jour le <time dateTime="2026-06-01">{dateLongue('2026-06-01')}</time></p>
         </div>
       </section>
 

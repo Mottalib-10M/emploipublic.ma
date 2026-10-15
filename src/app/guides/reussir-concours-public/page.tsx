@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
+import { dateLongue } from '@/lib/date';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -38,7 +39,7 @@ export default function GuideReussirConcours() {
           <h1 className="text-3xl md:text-4xl font-extrabold mb-3">
             Comment Réussir un Concours de la Fonction Publique au Maroc
           </h1>
-          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}), janvier 2026</p>
+          <p className="text-primary-100">Par {siteConfig.author.name} ({siteConfig.author.title}), janvier 2026 · Mis à jour le <time dateTime="2026-01-15">{dateLongue('2026-01-15')}</time></p>
         </div>
       </section>
 

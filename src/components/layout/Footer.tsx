@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
+import { dateLongue } from '@/lib/date';
 
 export default function Footer() {
   return (
@@ -72,6 +73,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">
             &copy; {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés.
+            {' · '}Dernière mise à jour : <time dateTime={siteConfig.lastUpdated}>{dateLongue(siteConfig.lastUpdated)}</time>
           </p>
           <p className="text-sm text-gray-500">
             Créé par <span className="text-gray-400">{siteConfig.author.name}</span> ({siteConfig.author.title})

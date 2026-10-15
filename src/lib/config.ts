@@ -10,6 +10,9 @@ export const siteConfig = {
     email: 'contact@emploipublic.ma',
   },
   contact: 'contact@emploipublic.ma',
+  // Date réelle de la dernière mise à jour des données (dernier commit de src/data), affichée en
+  // toutes lettres en pied de page (RECETTE §8.4).
+  lastUpdated: '2026-07-05',
   brand: {
     primary: '#7C3AED',
     primaryLight: '#8B5CF6',
